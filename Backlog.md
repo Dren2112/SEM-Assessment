@@ -3,9 +3,7 @@ BACKLOG
 Checklist Submission 1 (16% of CW mark)  
 -
 The following must be in place:  
-  
-GitHub project for coursework set-up. - done  
-Product Backlog created. - done  
+   
 Project builds to self-contained JAR with Maven.  
 Dockerfile for project set-up and works.  
 GitHub Actions for project set-up and build is working using JAR, and Docker on GitHub Actions.  
