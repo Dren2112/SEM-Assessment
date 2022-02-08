@@ -23,6 +23,6 @@ jobs:
       - name: Build
         run: docker build -t sem-assessment .
       - name: Run image
-        run: docker run --network sem-assessment --name semcontainer SEM-Assessment
+        run: docker run --network sem-assessment --name semcontainer sem-assessment
       - name: view logs
         run: docker logs semcontainer
