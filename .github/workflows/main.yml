@@ -21,7 +21,7 @@ jobs:
       - name: Build with Maven
         run: mvn package
       - name: Build
-        run: docker build -t SEM-Assessment .
+        run: docker build -t sem-assessment .
       - name: Run image
         run: docker run --network sem-assessment --name semcontainer SEM-Assessment
       - name: view logs
