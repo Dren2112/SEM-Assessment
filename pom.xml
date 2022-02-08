@@ -7,6 +7,7 @@
     <groupId>com.napier.sem</groupId>
     <artifactId>seMethods</artifactId>
     <version>0.1.0.1</version>
+
     <dependencies>
         <dependency>
             <groupId>org.mongodb</groupId>
@@ -14,6 +15,8 @@
             <version>3.6.4</version>
         </dependency>
     </dependencies>
+
+
     <properties>
         <maven.compiler.source>10</maven.compiler.source>
         <maven.compiler.target>10</maven.compiler.target>
