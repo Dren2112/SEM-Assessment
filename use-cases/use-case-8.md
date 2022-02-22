@@ -14,7 +14,7 @@
 
 <b>Primary Actor</b>: User / any other agent of the organisation.
 
-<b>Trigger</b>: A report is needed, user inputs a number.
+<b>Trigger</b>: A report is needed, user inputs a number. 
 
 <hr>
 
