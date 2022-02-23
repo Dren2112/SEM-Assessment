@@ -10,7 +10,7 @@
 
 <b>Success Condition</b>: User input is read, data is sorted and listed correctly, a report is made.
 
-<b>Failed Condition</b>: User inptu is not read, data is not sorted or listed correctly, report cannot be made.
+<b>Failed Condition</b>: User intut is not read, data is not sorted or listed correctly, report cannot be made.
 
 <b>Primary Actor</b>: User / any agent of the organisation
 
