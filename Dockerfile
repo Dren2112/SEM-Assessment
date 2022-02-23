@@ -1,4 +1,4 @@
 FROM openjdk:latest
-COPY ./target/classes/com/napier/sem /tmp/HelloWorld
+COPY ./target/SEM-Assessment-0.1.0.1-jar-with-dependencies.jar /tmp
 WORKDIR /tmp
-ENTRYPOINT ["java", "com.napier.sem.HelloWorld"]
+ENTRYPOINT ["java", "-jar", "SEM-Assessment-0.1.0.1-jar-with-dependencies.jar"]
