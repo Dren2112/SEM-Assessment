@@ -7,8 +7,13 @@ public class HelloWorld
     /** ---------------------------------------------------------------------------------------
      * Initialise report classes
      */
-    private CountryReportsOne countryOne = new CountryReportsOne();
-    private CountryReportsTwo CountryTwo = new CountryReportsTwo();
+    private final CountryReportsOne countryOne = new CountryReportsOne();
+    private final CountryReportsTwo CountryTwo = new CountryReportsTwo();
+    private final CityReportsOne cityOne = new CityReportsOne();
+    private final CityReportsTwo cityTwo = new CityReportsTwo();
+    private final CapCityReportsOne capOne = new CapCityReportsOne();
+    private final CapCityReportsTwo capTwo = new CapCityReportsTwo();
+
 
     /** ---------------------------------------------------------------------------------------
      * Connection to MySQL database.
