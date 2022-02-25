@@ -4,15 +4,14 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+/**
+ * Class Description
+ * This class contains the methods required to produce reports for issue #11 "Country Reports 1"
+ */
 public class CountryReportsOne {
 
-    /**
-     * Class Description
-     * This class contains the methods required to produce reports for issue #11 "Country Reports 1"
-     */
-
-    // All the countries in the world organised by largest population to smallest.
-    public void World(Connection con){
+    // A METHOD FOR THE TEST QUERY
+    public void Test(Connection con){
 
         try
         {
@@ -39,12 +38,24 @@ public class CountryReportsOne {
 
     }
 
-    // All the countries in a continent organised by largest population to smallest.
+    /**
+     * All the countries in the world organised by largest population to smallest.
+     */
+    public void World(Connection con){
+
+
+    }
+
+    /**
+     * All the countries in a continent organised by largest population to smallest.
+     */
     public void Continent(Connection con){
 
     }
 
-    // All the countries in a region organised by largest population to smallest.
+    /**
+     * All the countries in a region organised by largest population to smallest.
+     */
     public void Region(Connection con){
 
     }
