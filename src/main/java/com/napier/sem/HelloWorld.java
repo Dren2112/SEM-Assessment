@@ -13,6 +13,9 @@ public class HelloWorld
     private final CityReportsTwo cityTwo = new CityReportsTwo();
     private final CapCityReportsOne capOne = new CapCityReportsOne();
     private final CapCityReportsTwo capTwo = new CapCityReportsTwo();
+    private  final PopulationReports popRep = new PopulationReports();
+    private final ExtraInformation exInfo = new ExtraInformation();
+    private final LanguageReports LangRep = new LanguageReports();
 
 
     /** ---------------------------------------------------------------------------------------
@@ -89,7 +92,7 @@ public class HelloWorld
         // Connect to database
         app.connect();
 
-        // Attempt Test Query
+        // Attempt Test Query (test query method is located in CountryReportOne class)
         app.countryOne.World(app.con);
         System.out.println("It Worked!!!");
 
