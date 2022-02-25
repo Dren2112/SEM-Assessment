@@ -8,7 +8,7 @@ public class HelloWorld
      * Initialise report classes
      */
     private CountryReportsOne countryOne = new CountryReportsOne();
-
+    private CountryReportsTwo CountryTwo = new CountryReportsTwo();
 
     /** ---------------------------------------------------------------------------------------
      * Connection to MySQL database.
@@ -85,7 +85,6 @@ public class HelloWorld
         app.connect();
 
         // Attempt Test Query
-        //app.getTestData();
         app.countryOne.World(app.con);
         System.out.println("It Worked!!!");
 
