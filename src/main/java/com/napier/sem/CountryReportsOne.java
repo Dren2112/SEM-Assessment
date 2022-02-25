@@ -1,6 +1,8 @@
 package com.napier.sem;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class CountryReportsOne {
 
@@ -11,6 +13,29 @@ public class CountryReportsOne {
 
     // All the countries in the world organised by largest population to smallest.
     public void World(Connection con){
+
+        try
+        {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT Name FROM city WHERE ID = 1 ";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+            // Return new employee if valid.
+            // Check one is returned
+            if (rset.next())
+            {
+                System.out.println(rset.getString("Name"));
+                // system should output Kabul as result
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get details");
+        }
 
     }
 

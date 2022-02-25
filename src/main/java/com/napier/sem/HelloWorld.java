@@ -5,6 +5,12 @@ import java.sql.*;
 public class HelloWorld
 {
     /** ---------------------------------------------------------------------------------------
+     * Initialise report classes
+     */
+    private CountryReportsOne countryOne = new CountryReportsOne();
+
+
+    /** ---------------------------------------------------------------------------------------
      * Connection to MySQL database.
      */
     private Connection con = null;
@@ -69,38 +75,6 @@ public class HelloWorld
         }
     }
 
-    /** ---------------------------------------------------------------------------------------
-     * Generate Test SQL Query
-     */
-    public void getTestData()
-    {
-        // a test sql query
-        // asks to return the name of the city with the ID of 1
-        // prints the result (expected result: Kabul)
-
-        try
-        {
-            // Create an SQL statement
-            Statement stmt = con.createStatement();
-            // Create string for SQL statement
-            String strSelect =
-                    "SELECT Name FROM city WHERE ID = 1 ";
-            // Execute SQL statement
-            ResultSet rset = stmt.executeQuery(strSelect);
-            // Return new employee if valid.
-            // Check one is returned
-            if (rset.next())
-            {
-                System.out.println(rset.getString("Name"));
-                // system should output Kabul as result
-            }
-        }
-        catch (Exception e)
-        {
-            System.out.println(e.getMessage());
-            System.out.println("Failed to get details");
-        }
-    }
 
     public static void main(String[] args)
     {
@@ -111,7 +85,9 @@ public class HelloWorld
         app.connect();
 
         // Attempt Test Query
-        app.getTestData();
+        //app.getTestData();
+        app.countryOne.World(app.con);
+        System.out.println("It Worked!!!");
 
         // Disconnect from database
         app.disconnect();
