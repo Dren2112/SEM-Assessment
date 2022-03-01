@@ -92,9 +92,11 @@ public class HelloWorld
         // Connect to database
         app.connect();
 
-        // Attempt Test Query (test query method is located in CountryReportOne class)
-        app.countryOne.Test(app.con);
-        System.out.println("It Worked!!!");
+        // execute queries
+        //app.countryOne.World(app.con);
+        //app.countryOne.Continent(app.con);
+        app.countryOne.Region(app.con);
+
 
         // Disconnect from database
         app.disconnect();
