@@ -1,4 +1,4 @@
-<h1>Use Case #8 - Show [n] populated countries where [n] is user input  </h1>
+<h1>Use Case #12 - Show [n] populated countries where [n] is user input  </h1>
 <hr>
 <b>Goal in Context</b>: <i>As an organisation, we want to find the top N populated countries in the world where N is provided by the user, so that we can make a report on the top N populated countries.</i>
 
