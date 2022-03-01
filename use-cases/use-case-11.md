@@ -1,4 +1,4 @@
-<h1>Use Case #5 - Organise Countries by Largest Population to Smallest</h1>
+<h1>Use Case #11 - Organise Countries by Largest Population to Smallest</h1>
 <hr>
 <b>Goal in Context</b>: <i>As an organisation, we want to organise all the countries in the world by largest population to smallest, so that we can make an information report based on the population. </i>
 
