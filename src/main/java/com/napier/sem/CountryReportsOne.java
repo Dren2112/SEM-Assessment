@@ -42,7 +42,7 @@ public class CountryReportsOne {
     /**
      * All the countries in the world organised by largest population to smallest.
      */
-    public void World(Connection con){
+    public void World(Connection con, int limit){
         try
         {
             // Create an SQL statement
@@ -69,7 +69,12 @@ public class CountryReportsOne {
                 world.add(country);
             }
             //send arraylist to output
-            output(world);
+            if (limit == -1) {
+                output(world);
+            }
+            else {
+                CountryReportsTwo.outputLimit(world, limit);
+            }
         }
         catch (Exception e)
         {
@@ -83,7 +88,7 @@ public class CountryReportsOne {
     /**
      * All the countries in a continent organised by largest population to smallest.
      */
-    public void Continent(Connection con){
+    public void Continent(Connection con, int limit){
         try
         {
             // Create an SQL statement
@@ -110,7 +115,12 @@ public class CountryReportsOne {
                 world.add(country);
             }
             //send arraylist to output
-            output(world);
+            if (limit == -1) {
+                output(world);
+            }
+            else {
+                CountryReportsTwo.outputLimit(world, limit);
+            }
         }
         catch (Exception e)
         {
@@ -125,7 +135,7 @@ public class CountryReportsOne {
     /**
      * All the countries in a region organised by largest population to smallest.
      */
-    public void Region(Connection con){
+    public void Region(Connection con, int limit){
         try
         {
             // Create an SQL statement
@@ -152,7 +162,12 @@ public class CountryReportsOne {
                 world.add(country);
             }
             //send arraylist to output
-            output(world);
+            if (limit == -1) {
+                output(world);
+            }
+            else {
+                CountryReportsTwo.outputLimit(world, limit);
+            }
         }
         catch (Exception e)
         {

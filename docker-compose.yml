@@ -2,7 +2,11 @@ version: '3'
 services:
   # Application Dockerfile is in same folder which is .
   app:
+    stdin_open: true
+    tty: true
     build: .
+
+
 
   # db is is db folder
   db:

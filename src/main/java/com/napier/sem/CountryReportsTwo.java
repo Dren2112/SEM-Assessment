@@ -3,6 +3,8 @@ package com.napier.sem;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * Class Description
@@ -11,24 +13,30 @@ import java.sql.Statement;
 public class CountryReportsTwo {
 
     /**
-     * The top N populated countries in the world where N is provided by the user.
+     * asks the user for variable N
      */
-    public void TopWorld(Connection con){
+    public int GetLimit(Connection con){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("How many entries would you like to see?");
 
-
+        String amountToShow = scan.nextLine();
+        return Integer.parseInt(amountToShow);
     }
 
     /**
-     * The top N populated countries in a continent where N is provided by the user.
+    * outputs the results of a previous report, only showing a certain amount of lines, specified by limit
      */
-    public void TopContinent(Connection con){
-
-    }
-
-    /**
-     * The top N populated countries in a region where N is provided by the user.
-     */
-    public void TopRegion(Connection con){
-
+    public static void outputLimit(ArrayList<Country> contents, int limit){
+        System.out.println("Code Name Continent Region Population Capital");
+        for (int i = 0; i < limit; i++)
+        {
+            System.out.println(
+                    contents.get(i).Code
+                            + " " + contents.get(i).Name
+                            + " " + contents.get(i).Continent
+                            + " " + contents.get(i).Region
+                            + " " + String.valueOf(contents.get(i).Population)
+                            + " " + contents.get(i).Capital);
+        }
     }
 }
