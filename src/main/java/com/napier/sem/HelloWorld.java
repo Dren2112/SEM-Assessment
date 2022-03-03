@@ -93,7 +93,7 @@ public class HelloWorld
         app.connect();
 
         // execute queries
-        app.countryOne.World(app.con, -1);
+        app.countryone.World(app.con, -1);
         app.countryOne.Continent(app.con, -1);
         app.countryOne.Region(app.con, -1);
 
