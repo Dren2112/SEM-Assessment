@@ -97,12 +97,12 @@ public class HelloWorld
         app.countryOne.Continent(app.con, -1);
         app.countryOne.Region(app.con, -1);
 
-        int limit = app.CountryTwo.GetLimit(app.con);
-        app.countryOne.World(app.con, limit);
-        limit = app.CountryTwo.GetLimit(app.con);
-        app.countryOne.Continent(app.con, limit);
-        limit = app.CountryTwo.GetLimit(app.con);
-        app.countryOne.Region(app.con, limit);
+        //int limit = app.CountryTwo.GetLimit(app.con);
+        app.countryOne.World(app.con, 5);
+        //limit = app.CountryTwo.GetLimit(app.con);
+        app.countryOne.Continent(app.con, 5);
+        //limit = app.CountryTwo.GetLimit(app.con);
+        app.countryOne.Region(app.con, 5);
 
 
         // Disconnect from database
