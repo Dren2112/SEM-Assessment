@@ -92,9 +92,18 @@ public class HelloWorld
         // Connect to database
         app.connect();
 
-        // Attempt Test Query (test query method is located in CountryReportOne class)
-        app.countryOne.Test(app.con);
-        System.out.println("It Worked!!!");
+        // execute queries
+        app.countryOne.World(app.con, -1);
+        app.countryOne.Continent(app.con, -1);
+        app.countryOne.Region(app.con, -1);
+
+        //int limit = app.CountryTwo.GetLimit(app.con);
+        app.countryOne.World(app.con, 5);
+        //limit = app.CountryTwo.GetLimit(app.con);
+        app.countryOne.Continent(app.con, 5);
+        //limit = app.CountryTwo.GetLimit(app.con);
+        app.countryOne.Region(app.con, 5);
+
 
         // Disconnect from database
         app.disconnect();
