@@ -130,6 +130,7 @@ public class HelloWorld
         System.out.println(" ");
         System.out.println(" ");
 
+        app.cityOne.CityWorld(app.con);
 
         // Disconnect from database
         app.disconnect();
