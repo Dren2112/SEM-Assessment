@@ -97,12 +97,24 @@ public class HelloWorld
         app.countryOne.Continent(app.con, -1);
         app.countryOne.Region(app.con, -1);
 
+        // White Space
+        System.out.println(" ");
+        System.out.println(" ");
+
         //int limit = app.CountryTwo.GetLimit(app.con);
         app.countryOne.World(app.con, 5);
         //limit = app.CountryTwo.GetLimit(app.con);
         app.countryOne.Continent(app.con, 5);
         //limit = app.CountryTwo.GetLimit(app.con);
         app.countryOne.Region(app.con, 5);
+
+        // White Space
+        System.out.println(" ");
+        System.out.println(" ");
+
+        // execute CapCity queries
+        app.capOne.CapCityWorld(app.con);
+        System.out.println(" ");
 
 
         // Disconnect from database

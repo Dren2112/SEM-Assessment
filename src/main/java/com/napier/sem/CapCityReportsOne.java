@@ -3,10 +3,17 @@ package com.napier.sem;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 /**
  * Class Description
  * This class contains the methods required to produce reports for issue #15 "Capital City Reports 1"
+ *
+ * A capital city report requires the following columns:
+ *
+ * Name.
+ * Country.
+ * Population.
  */
 public class CapCityReportsOne {
 
@@ -15,6 +22,37 @@ public class CapCityReportsOne {
      */
     public void CapCityWorld(Connection con){
 
+        try
+        {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT city.Name, country.Name, city.Population FROM city INNER JOIN country ON city.ID = country.Capital ORDER BY city.Population DESC;";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // create arraylist of result
+            ArrayList<CapitalCity> world = new ArrayList<CapitalCity>();
+            //populate arraylist
+            while (rset.next())
+            {
+                CapitalCity capCity = new CapitalCity();
+                capCity.capCityName = rset.getString("city.Name");
+                capCity.countryName = rset.getString("country.Name");
+                capCity.capCityPop = rset.getInt("city.Population");
+
+                world.add(capCity);
+            }
+
+            output(world);
+
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get details");
+        }
 
     }
 
@@ -30,6 +68,25 @@ public class CapCityReportsOne {
      */
     public void CapCityRegion(Connection con){
 
+    }
+
+
+    /**
+     * method to output all Capital City arraylists
+     *
+     * @param contents - the arraylist containing the data to output
+     */
+    public void output(ArrayList<CapitalCity> contents){
+
+        System.out.println("--------------------------------------------------");
+        System.out.println("Capital-Name || Country-Name || Capital-Population");
+        System.out.println("--------------------------------------------------");
+
+        for (int i = 0; i < contents.size(); i++)
+        {
+            System.out.println(
+                    contents.get(i).capCityName + " -- " + contents.get(i).countryName + " -- " + String.valueOf(contents.get(i).capCityPop));
+        }
     }
 
 }
