@@ -17,8 +17,11 @@ import java.util.ArrayList;
  */
 public class CapCityReportsOne {
 
+
     /**
      * All the capital cities in the world organised by largest population to smallest.
+     *
+     * @param con - Database Connection
      */
     public void CapCityWorld(Connection con){
 
@@ -34,7 +37,7 @@ public class CapCityReportsOne {
 
             // create arraylist of result
             ArrayList<CapitalCity> world = new ArrayList<CapitalCity>();
-            //populate arraylist
+            //populate arraylist with data from result
             while (rset.next())
             {
                 CapitalCity capCity = new CapitalCity();
@@ -45,6 +48,7 @@ public class CapCityReportsOne {
                 world.add(capCity);
             }
 
+            // send data to output method
             output(world);
 
         }
@@ -58,15 +62,85 @@ public class CapCityReportsOne {
 
     /**
      * All the capital cities in a continent organised by largest population to smallest.
+     *
+     * @param con - Database Connection
      */
     public void CapCityContinent(Connection con){
+
+        try
+        {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT city.Name, country.Name, city.Population FROM city INNER JOIN country ON city.ID = country.Capital WHERE continent = 'Europe' ORDER BY city.Population DESC;";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // create arraylist of result
+            ArrayList<CapitalCity> world = new ArrayList<CapitalCity>();
+            //populate arraylist with data from result
+            while (rset.next())
+            {
+                CapitalCity capCity = new CapitalCity();
+                capCity.capCityName = rset.getString("city.Name");
+                capCity.countryName = rset.getString("country.Name");
+                capCity.capCityPop = rset.getInt("city.Population");
+
+                world.add(capCity);
+            }
+
+            // send data to output method
+            output(world);
+
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get details");
+        }
 
     }
 
     /**
      * All the capital cities in a region organised by largest to smallest.
+     *
+     * @param con - Database Connection
      */
     public void CapCityRegion(Connection con){
+
+        try
+        {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT city.Name, country.Name, city.Population FROM city INNER JOIN country ON city.ID = country.Capital WHERE region = 'Western Europe' ORDER BY city.Population DESC;";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // create arraylist of result
+            ArrayList<CapitalCity> world = new ArrayList<CapitalCity>();
+            //populate arraylist with data from result
+            while (rset.next())
+            {
+                CapitalCity capCity = new CapitalCity();
+                capCity.capCityName = rset.getString("city.Name");
+                capCity.countryName = rset.getString("country.Name");
+                capCity.capCityPop = rset.getInt("city.Population");
+
+                world.add(capCity);
+            }
+
+            // send data to output method
+            output(world);
+
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get details");
+        }
 
     }
 
@@ -78,9 +152,9 @@ public class CapCityReportsOne {
      */
     public void output(ArrayList<CapitalCity> contents){
 
-        System.out.println("--------------------------------------------------");
-        System.out.println("Capital-Name || Country-Name || Capital-Population");
-        System.out.println("--------------------------------------------------");
+        System.out.println("------------------------------------------------------------------");
+        System.out.println("Capital-Name     ||     Country-Name     ||     Capital-Population");
+        System.out.println("------------------------------------------------------------------");
 
         for (int i = 0; i < contents.size(); i++)
         {

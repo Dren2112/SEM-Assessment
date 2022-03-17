@@ -113,7 +113,16 @@ public class HelloWorld
         System.out.println(" ");
 
         // execute CapCity queries
+        System.out.println("Capital cities of The World by population in descending order");
         app.capOne.CapCityWorld(app.con);
+        System.out.println(" ");
+
+        System.out.println("Capital cities of Europe by population in descending order");
+        app.capOne.CapCityContinent(app.con);
+        System.out.println(" ");
+
+        System.out.println("Capital cities of Western Europe by population in descending order");
+        app.capOne.CapCityRegion(app.con);
         System.out.println(" ");
 
 
