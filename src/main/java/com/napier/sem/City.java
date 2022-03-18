@@ -3,8 +3,10 @@ package com.napier.sem;
 public class City {
     Integer ID;
     String Name;
-    int CountryCode;
+    String CountryCode;
     String District;
     int Popluation;
+    String continent;
+    String countryname;
 
 }

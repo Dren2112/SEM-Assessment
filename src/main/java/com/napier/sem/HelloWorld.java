@@ -84,8 +84,7 @@ public class HelloWorld
     }
 
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws InterruptedException {
         // Create new Application
         HelloWorld app = new HelloWorld();
 
@@ -131,7 +130,9 @@ public class HelloWorld
         System.out.println(" ");
 
         app.cityOne.CityWorld(app.con);
+        
 
+       app.cityOne.CityContinent(app.con);
         // Disconnect from database
         app.disconnect();
     }
