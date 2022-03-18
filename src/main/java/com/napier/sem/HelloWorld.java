@@ -130,9 +130,10 @@ public class HelloWorld
         System.out.println(" ");
 
         app.cityOne.CityWorld(app.con);
-        
+
 
        app.cityOne.CityContinent(app.con);
+       app.cityOne.CityRegion(app.con);
         // Disconnect from database
         app.disconnect();
     }

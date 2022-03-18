@@ -8,5 +8,6 @@ public class City {
     int Popluation;
     String continent;
     String countryname;
+    String region;
 
 }
