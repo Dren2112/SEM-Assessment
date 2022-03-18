@@ -167,9 +167,9 @@ public class CapCityReportsOne {
      */
     public void output(ArrayList<CapitalCity> contents){
 
-        System.out.println("------------------------------------------------------------------");
-        System.out.println("Capital-Name     ||     Country-Name     ||     Capital-Population");
-        System.out.println("------------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------------------------------------------------");
+        System.out.println("Capital-Name              ||              Country-Name              ||              Capital-Population");
+        System.out.println("------------------------------------------------------------------------------------------------------");
 
         for (int i = 0; i < contents.size(); i++)
         {

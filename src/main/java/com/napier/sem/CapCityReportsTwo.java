@@ -22,9 +22,9 @@ public class CapCityReportsTwo {
      */
     public static void outputLimit(ArrayList<CapitalCity> contents, int limit){
 
-        System.out.println("------------------------------------------------------------------");
-        System.out.println("Capital-Name     ||     Country-Name     ||     Capital-Population");
-        System.out.println("------------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------------------------------------------------");
+        System.out.println("Capital-Name              ||              Country-Name              ||              Capital-Population");
+        System.out.println("------------------------------------------------------------------------------------------------------");
 
         for (int i = 0; i < limit; i++)
         {
