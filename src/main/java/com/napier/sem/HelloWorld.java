@@ -114,7 +114,7 @@ public class HelloWorld
         System.out.println(" ");
         System.out.println(" ");
 
-        // execute CapCity queries
+        // execute CapCityOne queries
         System.out.println("Capital cities of The World by population in descending order");
         app.capOne.CapCityWorld(app.con);
         System.out.println(" ");
@@ -127,6 +127,22 @@ public class HelloWorld
 
         System.out.println("Capital cities of Western Europe by population in descending order");
         app.capOne.CapCityRegion(app.con);
+        System.out.println(" ");
+        System.out.println(" ");
+
+        // execute CapCityOne queries
+        System.out.println("Top 5 Capital cities of The World by population in descending order");
+
+        System.out.println(" ");
+        System.out.println(" ");
+
+        System.out.println("Top 5 Capital cities of Europe by population in descending order");
+
+        System.out.println(" ");
+        System.out.println(" ");
+
+        System.out.println("Top 5 Capital cities of Western Europe by population in descending order");
+
         System.out.println(" ");
         System.out.println(" ");
 

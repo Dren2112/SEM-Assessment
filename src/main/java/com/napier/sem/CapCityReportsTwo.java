@@ -3,33 +3,39 @@ package com.napier.sem;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 /**
  * Class Description
- * This class contains the methods required to produce reports for issue #16 "Capital City Reports 2"
+ * This class contains the method required to output reports for issue #16 "Capital City Reports 2"
+ *
+ *
  */
 public class CapCityReportsTwo {
 
-    /**
-     * The top N populated capital cities in the world where N is provided by the user.
-     */
-    public void TopCapCityWorld(Connection con){
-
-
-    }
 
     /**
-     * The top N populated capital cities in a continent where N is provided by the user.
+     * outputs the results of a previous report, only showing a certain amount of lines, specified by limit
+     *
+     * @param contents - the arraylist containing the data to output
+     * @param limit - the number of entries to show
      */
-    public void TopCapCityContinent(Connection con){
+    public static void outputLimit(ArrayList<CapitalCity> contents, int limit){
 
-    }
+        System.out.println("------------------------------------------------------------------");
+        System.out.println("Capital-Name     ||     Country-Name     ||     Capital-Population");
+        System.out.println("------------------------------------------------------------------");
 
-    /**
-     * The top N populated capital cities in a region where N is provided by the user.
-     */
-    public void TopCapCityRegion(Connection con){
+        for (int i = 0; i < limit; i++)
+        {
+            // prepare string
+            String one = String.format("%-40s", contents.get(i).capCityName);
+            String two = String.format("%-55s", contents.get(i).countryName);
+            String three = String.format("%-16s", contents.get(i).capCityPop);
 
+            // print string
+            System.out.println(one + two + three);
+        }
     }
 
 }
