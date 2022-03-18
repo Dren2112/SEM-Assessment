@@ -160,6 +160,45 @@ public class CityReportsOne {
      * All the cities in a country organised by largest population to smallest.
      */
     public void CityCountry(Connection con){
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect ="Select city.ID, city.Name,country.name,city.Population from city join country on city.Countrycode=country.code where city.Countrycode=country.code AND country.name= 'India' ORDER BY city.population DESC";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // create arraylist of result
+            ArrayList<City> citycountry = new ArrayList<City>();
+            //populate arraylist
+            while (rset.next()) {
+                City city = new City();
+                city.ID = rset.getInt("ID");
+                city.Name = rset.getString("Name");
+                city.Popluation = rset.getInt("population");
+                city.countryname=rset.getString("country.name");
+
+                citycountry.add(city);
+            }
+            displaythree(citycountry);
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get details");
+        }
+
+
+
+    }
+    public void displaythree(ArrayList<City> ct3) throws InterruptedException {
+        System.out.println("All the cities in specified region organsied by largest population to smallest");
+        System.out.println("Processing.....");
+        Thread.sleep(900);
+        System.out.println("\n");
+        System.out.println("\tID\t\t\t\t\t\t\tName\t\t\t\t\t\t\t\t\t\t\t\t\tCountryName\t\t\t\t\t\t\t\t\t\t\t\t\tpopulation\t\t");
+        for (int i = 0; i < ct3.size(); i++) {
+            System.out.println("\t" + ct3.get(i).ID + "\t\t\t\t\t\t\t" + ct3.get(i).Name + "\t\t\t\t\t\t\t\t\t\t\t\t\t" + ct3.get(i).countryname + "\t\t\t\t\t\t\t\t\t\t\t\t\t" +ct3.get(i).Popluation);
+        }
 
     }
 
@@ -167,6 +206,46 @@ public class CityReportsOne {
      * All the cities in a district organised by largest population to smallest.
      */
     public void CityDistrict(Connection con){
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect ="Select ID, Name, District, Population from city where district='New South Wales' ORDER BY population DESC";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // create arraylist of result
+            ArrayList<City> citydistrict = new ArrayList<City>();
+            //populate arraylist
+            while (rset.next()) {
+                City city = new City();
+                city.ID = rset.getInt("ID");
+                city.Name = rset.getString("Name");
+                city.Popluation = rset.getInt("population");
+                city.District=rset.getString("District");
+
+                citydistrict.add(city);
+            }
+            displayfour(citydistrict);
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get details");
+        }
+
+
 
     }
+    public void displayfour(ArrayList<City> ct4) throws InterruptedException {
+        System.out.println("All the cities in specified region organsied by largest population to smallest");
+        System.out.println("Processing.....");
+        Thread.sleep(900);
+        System.out.println("\n");
+        System.out.println("\tID\t\t\t\t\t\t\tName\t\t\t\t\t\t\t\t\t\t\t\t\tDistrict\t\t\t\t\t\t\t\t\t\t\t\t\tpopulation\t\t");
+        for (int i = 0; i < ct4.size(); i++) {
+            System.out.println("\t" + ct4.get(i).ID + "\t\t\t\t\t\t\t" + ct4.get(i).Name + "\t\t\t\t\t\t\t\t\t\t\t\t\t" + ct4.get(i).District + "\t\t\t\t\t\t\t\t\t\t\t\t\t" +ct4.get(i).Popluation);
+        }
+
+    }
+
 }

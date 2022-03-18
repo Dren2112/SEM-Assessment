@@ -134,6 +134,9 @@ public class HelloWorld
 
        app.cityOne.CityContinent(app.con);
        app.cityOne.CityRegion(app.con);
+       Thread.sleep(2000);
+       app.cityOne.CityCountry(app.con);
+       app.cityOne.CityDistrict(app.con);
         // Disconnect from database
         app.disconnect();
     }
