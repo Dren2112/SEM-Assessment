@@ -1,6 +1,9 @@
 package com.napier.sem;
 
 import java.sql.*;
+import java.util.Scanner;
+
+import static java.lang.System.exit;
 
 public class HelloWorld
 {
@@ -36,7 +39,7 @@ public class HelloWorld
         catch (ClassNotFoundException e)
         {
             System.out.println("Could not load SQL driver");
-            System.exit(-1);
+            exit(-1);
         }
 
         int retries = 10;
@@ -128,16 +131,53 @@ public class HelloWorld
         app.capOne.CapCityRegion(app.con);
         System.out.println(" ");
         System.out.println(" ");
-
-        app.cityOne.CityWorld(app.con);
-
-
-       app.cityOne.CityContinent(app.con);
-       app.cityOne.CityRegion(app.con);
-       Thread.sleep(2000);
-       app.cityOne.CityCountry(app.con);
-       app.cityOne.CityDistrict(app.con);
+        while(true)
+        {
+        System.out.println("\t\t\t\t***********WELCOME IN THE PROGRAM***********");
+        System.out.println("LOADING..........");
+        Thread.sleep(1000);
+        System.out.println("Press 1 for Organised all the cities in the WORLD By Largest to Smallest");
+        System.out.println("Press 2 for Organised all the cities in a CONTINENT By Largest to Smallest");
+        System.out.println("Press 3 for Organised all the cities in a REGION By Largest to Smallest");
+        System.out.println("Press 4 for Organised all the cities in a COUNTRY By Largest to Smallest");
+        System.out.println("Press 5 for Organised all the cities in a DISTRICT By Largest to Smallest");
+        System.out.println("Press 6 for EXIT") ;
+        Scanner s1= new Scanner(System.in);
+        int a = s1.nextInt();
+        switch(a)
+        {
+            case 1:
+                System.out.println("As an organisation, we want to be able to list all the cities in the world in descending order, so that we can make a report on city population.");
+                System.out.println("Processing......");
+                Thread.sleep(900);
+                app.cityOne.CityWorld(app.con);
+            case 2:
+                System.out.println("As an organisation, we want to be able to list all the cities in a continent in descending order, so that we can make a report on city population.");
+                System.out.println("Processing......");
+                Thread.sleep(900);
+                app.cityOne.CityContinent(app.con);
+            case 3:
+                System.out.println("As an organisation, we want to be able to list all the cities in a specified region in descending order, so that we can make a report on city population.");
+                System.out.println("Processing......");
+                Thread.sleep(900);
+                app.cityOne.CityRegion(app.con);
+            case 4:
+                System.out.println("As an organisation, we want to be able to list all the cities in a country in descending order, so that we can make a report on city population.");
+                System.out.println("Processing......");
+                Thread.sleep(900);
+                app.cityOne.CityCountry(app.con);
+            case 5:
+                System.out.println("As an organisation, we want to be able to list all the cities in a district in descending order, so that we can make a report on city population.");
+                System.out.println("Processing......");
+                Thread.sleep(900);
+                app.cityOne.CityDistrict(app.con);
+            case 6:
+                exit(0);
+            default:
+                System.out.println("Sorry Wrong Input Please Try Again");
+        }
         // Disconnect from database
         app.disconnect();
+    }
     }
 }
