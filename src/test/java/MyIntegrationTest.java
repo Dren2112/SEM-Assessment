@@ -1,4 +1,5 @@
-package com.napier.sem;
+//package com.napier.sem;
+import com.napier.sem.HelloWorld;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
