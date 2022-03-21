@@ -22,20 +22,31 @@ public class CapCityReportsTwo {
      */
     public static void outputLimit(ArrayList<CapitalCity> contents, int limit){
 
-        System.out.println("------------------------------------------------------------------------------------------------------");
-        System.out.println("Capital-Name              ||              Country-Name              ||              Capital-Population");
-        System.out.println("------------------------------------------------------------------------------------------------------");
-
-        for (int i = 0; i < limit; i++)
-        {
-            // prepare string
-            String one = String.format("%-40s", contents.get(i).capCityName);
-            String two = String.format("%-55s", contents.get(i).countryName);
-            String three = String.format("%-16s", contents.get(i).capCityPop);
-
-            // print string
-            System.out.println(one + two + three);
+        if (contents == null){
+            System.out.println("No Data Found");
         }
+        else if (limit < 1){
+            System.out.println("Limit must be more than 0");
+        }
+        else{
+
+            System.out.println("------------------------------------------------------------------------------------------------------");
+            System.out.println("Capital-Name              ||              Country-Name              ||              Capital-Population");
+            System.out.println("------------------------------------------------------------------------------------------------------");
+
+            for (int i = 0; i < limit; i++)
+            {
+                // prepare string
+                String one = String.format("%-40s", contents.get(i).capCityName);
+                String two = String.format("%-55s", contents.get(i).countryName);
+                String three = String.format("%-16s", contents.get(i).capCityPop);
+
+                // print string
+                System.out.println(one + two + three);
+            }
+
+        }
+
     }
 
 }
