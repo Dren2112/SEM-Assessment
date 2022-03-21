@@ -42,7 +42,7 @@ public class CountryReportsOne {
     /**
      * All the countries in the world organised by largest population to smallest.
      */
-    public void World(Connection con, int limit){
+    public ArrayList<Country> World(Connection con, int limit){
         try
         {
             // Create an SQL statement
@@ -68,18 +68,18 @@ public class CountryReportsOne {
                 
                 world.add(country);
             }
+
             //send arraylist to output
-            if (limit == -1) {
-                output(world);
-            }
-            else {
-                CountryReportsTwo.outputLimit(world, limit);
-            }
+            sendToOutput(world, limit);
+
+            return world;
         }
         catch (Exception e)
         {
             System.out.println(e.getMessage());
             System.out.println("Failed to get details");
+
+            return null;
         }
 
 
@@ -88,7 +88,7 @@ public class CountryReportsOne {
     /**
      * All the countries in a continent organised by largest population to smallest.
      */
-    public void Continent(Connection con, int limit){
+    public ArrayList<Country> Continent(Connection con, int limit){
         try
         {
             // Create an SQL statement
@@ -114,18 +114,18 @@ public class CountryReportsOne {
 
                 world.add(country);
             }
+
             //send arraylist to output
-            if (limit == -1) {
-                output(world);
-            }
-            else {
-                CountryReportsTwo.outputLimit(world, limit);
-            }
+            sendToOutput(world, limit);
+
+            return world;
         }
         catch (Exception e)
         {
             System.out.println(e.getMessage());
             System.out.println("Failed to get details");
+
+            return null;
         }
 
 
@@ -135,7 +135,7 @@ public class CountryReportsOne {
     /**
      * All the countries in a region organised by largest population to smallest.
      */
-    public void Region(Connection con, int limit){
+    public ArrayList<Country> Region(Connection con, int limit){
         try
         {
             // Create an SQL statement
@@ -161,22 +161,38 @@ public class CountryReportsOne {
 
                 world.add(country);
             }
+
             //send arraylist to output
-            if (limit == -1) {
-                output(world);
-            }
-            else {
-                CountryReportsTwo.outputLimit(world, limit);
-            }
+            sendToOutput(world, limit);
+
+            return world;
         }
         catch (Exception e)
         {
             System.out.println(e.getMessage());
             System.out.println("Failed to get details");
+
+            return null;
         }
 
 
 
+    }
+
+    /**
+     * Process an arraylist and send to print
+     *
+     * @param world
+     * @param limit
+     */
+    public void sendToOutput(ArrayList<Country> world, int limit ){
+        //send arraylist to output
+        if (limit == -1) {
+            output(world);
+        }
+        else {
+            CountryReportsTwo.outputLimit(world, limit);
+        }
     }
 
     /**

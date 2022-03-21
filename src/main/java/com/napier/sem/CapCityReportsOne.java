@@ -23,7 +23,7 @@ public class CapCityReportsOne {
      *
      * @param con - Database Connection
      */
-    public void CapCityWorld(Connection con, int limit){
+    public ArrayList<CapitalCity> CapCityWorld(Connection con, int limit){
 
         try
         {
@@ -49,18 +49,17 @@ public class CapCityReportsOne {
             }
 
             //send arraylist to output
-            if (limit == -1) {
-                output(world);
-            }
-            else {
-                CapCityReportsTwo.outputLimit(world, limit);
-            }
+            sendToOutput(world, limit);
+
+            return world;
 
         }
         catch (Exception e)
         {
             System.out.println(e.getMessage());
             System.out.println("Failed to get details");
+
+            return null;
         }
 
     }
@@ -70,7 +69,7 @@ public class CapCityReportsOne {
      *
      * @param con - Database Connection
      */
-    public void CapCityContinent(Connection con, int limit){
+    public ArrayList<CapitalCity> CapCityContinent(Connection con, int limit){
 
         try
         {
@@ -96,18 +95,17 @@ public class CapCityReportsOne {
             }
 
             //send arraylist to output
-            if (limit == -1) {
-                output(world);
-            }
-            else {
-                CapCityReportsTwo.outputLimit(world, limit);
-            }
+            sendToOutput(world, limit);
+
+            return world;
 
         }
         catch (Exception e)
         {
             System.out.println(e.getMessage());
             System.out.println("Failed to get details");
+
+            return null;
         }
 
     }
@@ -117,7 +115,7 @@ public class CapCityReportsOne {
      *
      * @param con - Database Connection
      */
-    public void CapCityRegion(Connection con, int limit){
+    public ArrayList<CapitalCity> CapCityRegion(Connection con, int limit){
 
         try
         {
@@ -143,22 +141,37 @@ public class CapCityReportsOne {
             }
 
             //send arraylist to output
-            if (limit == -1) {
-                output(world);
-            }
-            else {
-                CapCityReportsTwo.outputLimit(world, limit);
-            }
+            sendToOutput(world, limit);
+
+            return world;
 
         }
         catch (Exception e)
         {
             System.out.println(e.getMessage());
             System.out.println("Failed to get details");
+
+            return null;
         }
 
     }
 
+
+    /**
+     * Process an arraylist and send to print
+     *
+     * @param world
+     * @param limit
+     */
+    public void sendToOutput(ArrayList<CapitalCity> world, int limit ){
+        //send arraylist to output
+        if (limit == -1) {
+            output(world);
+        }
+        else {
+            CapCityReportsTwo.outputLimit(world, limit);
+        }
+    }
 
     /**
      * method to output all Capital City arraylists
