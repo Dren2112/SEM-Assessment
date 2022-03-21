@@ -116,19 +116,41 @@ public class HelloWorld
         System.out.println(" ");
         System.out.println(" ");
 
-        // execute CapCity queries
+        // execute CapCityOne queries
+        System.out.println("------------------------------------------------------------------------------------------------------");
         System.out.println("Capital cities of The World by population in descending order");
-        app.capOne.CapCityWorld(app.con);
+        app.capOne.CapCityWorld(app.con, -1);
         System.out.println(" ");
         System.out.println(" ");
 
+        System.out.println("------------------------------------------------------------------------------------------------------");
         System.out.println("Capital cities of Europe by population in descending order");
-        app.capOne.CapCityContinent(app.con);
+        app.capOne.CapCityContinent(app.con, -1);
         System.out.println(" ");
         System.out.println(" ");
 
+        System.out.println("------------------------------------------------------------------------------------------------------");
         System.out.println("Capital cities of Western Europe by population in descending order");
-        app.capOne.CapCityRegion(app.con);
+        app.capOne.CapCityRegion(app.con, -1);
+        System.out.println(" ");
+        System.out.println(" ");
+
+        // execute CapCityOne queries
+        System.out.println("------------------------------------------------------------------------------------------------------");
+        System.out.println("Top 5 Capital cities of The World by population in descending order");
+        app.capOne.CapCityWorld(app.con, 5);
+        System.out.println(" ");
+        System.out.println(" ");
+
+        System.out.println("------------------------------------------------------------------------------------------------------");
+        System.out.println("Top 5 Capital cities of Europe by population in descending order");
+        app.capOne.CapCityContinent(app.con, 5);
+        System.out.println(" ");
+        System.out.println(" ");
+
+        System.out.println("------------------------------------------------------------------------------------------------------");
+        System.out.println("Top 5 Capital cities of Western Europe by population in descending order");
+        app.capOne.CapCityContinent(app.con, 5);
         System.out.println(" ");
         System.out.println(" ");
 

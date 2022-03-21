@@ -23,7 +23,7 @@ public class CapCityReportsOne {
      *
      * @param con - Database Connection
      */
-    public void CapCityWorld(Connection con){
+    public void CapCityWorld(Connection con, int limit){
 
         try
         {
@@ -48,8 +48,13 @@ public class CapCityReportsOne {
                 world.add(capCity);
             }
 
-            // send data to output method
-            output(world);
+            //send arraylist to output
+            if (limit == -1) {
+                output(world);
+            }
+            else {
+                CapCityReportsTwo.outputLimit(world, limit);
+            }
 
         }
         catch (Exception e)
@@ -65,7 +70,7 @@ public class CapCityReportsOne {
      *
      * @param con - Database Connection
      */
-    public void CapCityContinent(Connection con){
+    public void CapCityContinent(Connection con, int limit){
 
         try
         {
@@ -90,8 +95,13 @@ public class CapCityReportsOne {
                 world.add(capCity);
             }
 
-            // send data to output method
-            output(world);
+            //send arraylist to output
+            if (limit == -1) {
+                output(world);
+            }
+            else {
+                CapCityReportsTwo.outputLimit(world, limit);
+            }
 
         }
         catch (Exception e)
@@ -107,7 +117,7 @@ public class CapCityReportsOne {
      *
      * @param con - Database Connection
      */
-    public void CapCityRegion(Connection con){
+    public void CapCityRegion(Connection con, int limit){
 
         try
         {
@@ -132,8 +142,13 @@ public class CapCityReportsOne {
                 world.add(capCity);
             }
 
-            // send data to output method
-            output(world);
+            //send arraylist to output
+            if (limit == -1) {
+                output(world);
+            }
+            else {
+                CapCityReportsTwo.outputLimit(world, limit);
+            }
 
         }
         catch (Exception e)
@@ -152,9 +167,9 @@ public class CapCityReportsOne {
      */
     public void output(ArrayList<CapitalCity> contents){
 
-        System.out.println("------------------------------------------------------------------");
-        System.out.println("Capital-Name     ||     Country-Name     ||     Capital-Population");
-        System.out.println("------------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------------------------------------------------");
+        System.out.println("Capital-Name              ||              Country-Name              ||              Capital-Population");
+        System.out.println("------------------------------------------------------------------------------------------------------");
 
         for (int i = 0; i < contents.size(); i++)
         {
