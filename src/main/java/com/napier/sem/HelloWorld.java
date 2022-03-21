@@ -29,7 +29,7 @@ public class HelloWorld
     /** ---------------------------------------------------------------------------------------
      * Connect to the MySQL database.
      */
-    public void connect()
+    public void connect(String location, int delay)
     {
         try
         {
@@ -49,9 +49,9 @@ public class HelloWorld
             try
             {
                 // Wait a bit for db to start
-                Thread.sleep(30000);
+                Thread.sleep(delay);
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://db:3306/world?useSSL=false", "root", "example");
+                con = DriverManager.getConnection("jdbc:mysql://" + location + "/world?useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
                 break;
             }
@@ -92,7 +92,11 @@ public class HelloWorld
         HelloWorld app = new HelloWorld();
 
         // Connect to database
-        app.connect();
+        if(args.length < 1){
+            app.connect("localhost:33060", 30000);
+        }else{
+            app.connect(args[0], Integer.parseInt(args[1]));
+        }
 
         // execute queries
         app.countryOne.World(app.con, -1);
