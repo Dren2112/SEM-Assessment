@@ -13,6 +13,9 @@ public class MyIntegrationTest
 {
     static HelloWorld app;
 
+    /**
+     * connect to the database before performing tests
+     */
     @BeforeAll
     static void init()
     {
@@ -21,15 +24,18 @@ public class MyIntegrationTest
 
     }
 
+    
     @Test
     void testGetCountry()
     {
+        // Sample test - must be replaced with real test
         assertEquals(5, 5);
     }
 
     @Test
     void testGetCity()
     {
+        // Sample test - must be replaced with real test
         assertNotEquals(4,5);
     }
 
