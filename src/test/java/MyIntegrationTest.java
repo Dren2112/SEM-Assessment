@@ -89,7 +89,7 @@ public class MyIntegrationTest
         // get the number of capital cities returned by the query
         int result = capOne.CapCityContinent(app.con, -1).size();
 
-        // check result - expected 3
+        // check result - expected 46
         assertEquals(46, result);
     }
 
@@ -102,7 +102,7 @@ public class MyIntegrationTest
         // get the number of capital cities returned by the query
         int result = capOne.CapCityRegion(app.con, -1).size();
 
-        // check result - expected 3
+        // check result - expected 9
         assertEquals(9, result);
     }
 
