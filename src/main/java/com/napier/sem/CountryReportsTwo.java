@@ -27,16 +27,27 @@ public class CountryReportsTwo {
     * outputs the results of a previous report, only showing a certain amount of lines, specified by limit
      */
     public static void outputLimit(ArrayList<Country> contents, int limit){
-        System.out.println("Code Name Continent Region Population Capital");
-        for (int i = 0; i < limit; i++)
-        {
-            System.out.println(
-                    contents.get(i).Code
-                            + " " + contents.get(i).Name
-                            + " " + contents.get(i).Continent
-                            + " " + contents.get(i).Region
-                            + " " + String.valueOf(contents.get(i).Population)
-                            + " " + contents.get(i).Capital);
+
+        if (contents == null){
+            System.out.println("No Data Found");
         }
+        else if (limit < 1){
+            System.out.println("Limit must be more than 0");
+        }
+        else{
+
+            System.out.println("Code Name Continent Region Population Capital");
+            for (int i = 0; i < limit; i++)
+            {
+                System.out.println(
+                        contents.get(i).Code
+                                + " " + contents.get(i).Name
+                                + " " + contents.get(i).Continent
+                                + " " + contents.get(i).Region
+                                + " " + String.valueOf(contents.get(i).Population)
+                                + " " + contents.get(i).Capital);
+            }
+        }
+
     }
 }

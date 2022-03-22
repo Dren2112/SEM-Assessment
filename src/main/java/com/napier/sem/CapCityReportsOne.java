@@ -164,12 +164,19 @@ public class CapCityReportsOne {
      * @param limit
      */
     public void sendToOutput(ArrayList<CapitalCity> world, int limit ){
-        //send arraylist to output
-        if (limit == -1) {
-            output(world);
+
+        if (world == null){
+            System.out.println("No Data To Send");
         }
-        else {
-            CapCityReportsTwo.outputLimit(world, limit);
+        else{
+
+            //send arraylist to output
+            if (limit == -1) {
+                output(world);
+            }
+            else {
+                CapCityReportsTwo.outputLimit(world, limit);
+            }
         }
     }
 

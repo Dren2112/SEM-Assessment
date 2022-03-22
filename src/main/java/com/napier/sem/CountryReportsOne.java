@@ -186,12 +186,19 @@ public class CountryReportsOne {
      * @param limit
      */
     public void sendToOutput(ArrayList<Country> world, int limit ){
-        //send arraylist to output
-        if (limit == -1) {
-            output(world);
+
+        if (world == null){
+            System.out.println("No Data To Send");
         }
-        else {
-            CountryReportsTwo.outputLimit(world, limit);
+        else{
+
+            //send arraylist to output
+            if (limit == -1) {
+                output(world);
+            }
+            else {
+                CountryReportsTwo.outputLimit(world, limit);
+            }
         }
     }
 
@@ -199,16 +206,23 @@ public class CountryReportsOne {
      * method to output all country arraylists
      */
     public void output(ArrayList<Country> contents){
-        System.out.println("Code Name Continent Region Population Capital");
-        for (int i = 0; i < contents.size(); i++)
-        {
-            System.out.println(
-                    contents.get(i).Code
-                    + " " + contents.get(i).Name
-                    + " " + contents.get(i).Continent
-                    + " " + contents.get(i).Region
-                            + " " + String.valueOf(contents.get(i).Population)
-                            + " " + contents.get(i).Capital);
+
+        if (contents == null){
+            System.out.println("No Data Found");
+        }
+        else{
+
+            System.out.println("Code Name Continent Region Population Capital");
+            for (int i = 0; i < contents.size(); i++)
+            {
+                System.out.println(
+                        contents.get(i).Code
+                                + " " + contents.get(i).Name
+                                + " " + contents.get(i).Continent
+                                + " " + contents.get(i).Region
+                                + " " + String.valueOf(contents.get(i).Population)
+                                + " " + contents.get(i).Capital);
+            }
         }
     }
 }
