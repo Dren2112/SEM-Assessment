@@ -131,8 +131,7 @@ public class HelloWorld
         app.capOne.CapCityRegion(app.con);
         System.out.println(" ");
         System.out.println(" ");
-        while(true)
-        {
+              System.out.println("\n\n");
             System.out.println("\t\t\t\t***********WELCOME IN THE PROGRAM***********");
             System.out.println("LOADING..........");
             Thread.sleep(1000);
@@ -173,6 +172,5 @@ public class HelloWorld
             app.cityOne.CityDistrict(app.con);
             // Disconnect from database
         app.disconnect();
-    }
     }
 }
