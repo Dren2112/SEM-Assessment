@@ -141,36 +141,59 @@ public class HelloWorld
             System.out.println("As an organisation, we want to be able to list all the cities in the world in descending order, so that we can make a report on city population.");
             System.out.println("Processing......");
             Thread.sleep(1000);
-            app.cityOne.CityWorld(app.con);
+            app.cityOne.CityWorld(app.con,-1);
+            System.out.println("\n\n\n\n");
 
-            //CODE TO ORGANISED ALL THE POPULATION IN THE CITIES IN A CONTINENT
+            System.out.println("As an organisation, we want to find the top N populated cities in the world where N is provided by the user, so that we can make a report on the based of top N populated cities.");
+            Thread.sleep(1000);
+            app.cityOne.CityWorld(app.con,6);
+
+        //CODE TO ORGANISED ALL THE POPULATION IN THE CITIES IN A CONTINENT
             System.out.println("\t\t********************Program 2 *******************");
             System.out.println("As an organisation, we want to be able to list all the cities in a continent in descending order, so that we can make a report on city population.");
             System.out.println("Processing......");
             Thread.sleep(1000);
-            app.cityOne.CityContinent(app.con);
+            app.cityOne.CityContinent(app.con,-1);
+
+            System.out.println("As an organisation, we want to find the top N populated cities in a continent where N is provided by the user, so that we can make a report on the based of top N populated cities.");
+            Thread.sleep(1000);
+            app.cityOne.CityContinent(app.con,6);
 
             // CODE TO ORGANISED ALL THE POPULATION OF THE CITIES IN A SPECIFIED REGION
             System.out.println("\t\t********************Program 3 *******************");
             System.out.println("As an organisation, we want to be able to list all the cities in a specified region in descending order, so that we can make a report on city population.");
             System.out.println("Processing......");
             Thread.sleep(1000);
-            app.cityOne.CityRegion(app.con);
+            app.cityOne.CityRegion(app.con,-1);
+
+
+        System.out.println("As an organisation, we want to find the top N populated cities in a specified region where N is provided by the user, so that we can make a report on the based of top N populated cities.");
+        Thread.sleep(1000);
+        app.cityOne.CityRegion(app.con,6);
 
             //CODE TO ORGANISED ALL THE POPULATION OF THE CITIES IN A COUNTRY
             System.out.println("\t\t********************Program 4 *******************");
             System.out.println("As an organisation, we want to be able to list all the cities in a country in descending order, so that we can make a report on city population.");
             System.out.println("Processing......");
             Thread.sleep(1000);
-            app.cityOne.CityCountry(app.con);
+            app.cityOne.CityCountry(app.con,-1);
 
-            //CODE TO ORGANISED ALL THE POPULATION OF THE CITIES IN A  DISTRICT
+        System.out.println("As an organisation, we want to find the top N populated cities in a country where N is provided by the user, so that we can make a report on the based of top N populated cities.");
+        Thread.sleep(1000);
+        app.cityOne.CityCountry(app.con,6);
+
+        //CODE TO ORGANISED ALL THE POPULATION OF THE CITIES IN A  DISTRICT
             System.out.println("\t\t********************Program 5 *******************");
             System.out.println("As an organisation, we want to be able to list all the cities in a district in descending order, so that we can make a report on city population.");
             System.out.println("Processing......");
             Thread.sleep(1000);
-            app.cityOne.CityDistrict(app.con);
-            // Disconnect from database
+            app.cityOne.CityDistrict(app.con,-1);
+
+        System.out.println("As an organisation, we want to find the top N populated cities in a district where N is provided by the user, so that we can make a report on the based of top N populated cities.");
+        Thread.sleep(1000);
+        app.cityOne.CityDistrict(app.con,4);
+
+        // Disconnect from database
         app.disconnect();
     }
 }

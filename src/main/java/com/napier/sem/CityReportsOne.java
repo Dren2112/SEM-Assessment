@@ -11,10 +11,11 @@ import java.util.ArrayList;
  */
 public class CityReportsOne {
 
+    CityReportsTwo cp= new CityReportsTwo();
     /**
      * All the cities in the world organised by largest population to smallest.
      */
-    public void CityWorld(Connection con){
+    public void CityWorld(Connection con,int limit){
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
@@ -36,8 +37,23 @@ public class CityReportsOne {
 
                 cityworld.add(city);
             }
-            display(cityworld);
 
+            if(cityworld==null)
+            {
+                System.out.println("Your list is empty");
+
+            }
+            else
+            {
+                if(limit==-1)
+                {
+                    display(cityworld);
+                }
+                else
+                {
+                    cp.Display(cityworld,limit);
+                }
+            }
         } catch (Exception e) {
             System.out.println(e.getMessage());
             System.out.println("Failed to get details");
@@ -61,7 +77,7 @@ public class CityReportsOne {
     /**
      * All the cities in a continent organised by largest population to smallest.
      */
-    public void CityContinent(Connection con){
+    public void CityContinent(Connection con,int limit){
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
@@ -83,7 +99,23 @@ public class CityReportsOne {
 
                 citycontinent.add(city);
             }
-            displayone(citycontinent);
+
+            if(citycontinent==null)
+            {
+                System.out.println("Your list is empty");
+
+            }
+            else
+            {
+                if(limit==-1)
+                {
+                    displayone(citycontinent);
+                }
+                else
+                {
+                    cp.Display(citycontinent,limit);
+                }
+            }
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -109,7 +141,7 @@ public class CityReportsOne {
     /**
      * All the cities in a region organised by largest population to smallest.
      */
-      public void CityRegion(Connection con){
+      public void CityRegion(Connection con,int limit){
           try {
               // Create an SQL statement
               Statement stmt = con.createStatement();
@@ -131,8 +163,25 @@ public class CityReportsOne {
 
                   cityregion.add(city);
               }
-              displaytwo(cityregion);
 
+
+              if(cityregion==null)
+              {
+                  System.out.println("Your list is empty");
+
+              }
+              else
+              {
+                  if(limit==-1)
+                  {
+
+                      displaytwo(cityregion);
+                  }
+                  else
+                  {
+                      cp.Display(cityregion,limit);
+                  }
+              }
           } catch (Exception e) {
               System.out.println(e.getMessage());
               System.out.println("Failed to get details");
@@ -159,7 +208,7 @@ public class CityReportsOne {
     /**
      * All the cities in a country organised by largest population to smallest.
      */
-    public void CityCountry(Connection con){
+    public void CityCountry(Connection con,int limit){
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
@@ -180,7 +229,23 @@ public class CityReportsOne {
 
                 citycountry.add(city);
             }
-            displaythree(citycountry);
+
+            if(citycountry==null)
+            {
+                System.out.println("Your list is empty");
+
+            }
+            else
+            {
+                if(limit==-1)
+                {
+                    displaythree(citycountry);
+                }
+                else
+                {
+                    cp.Display(citycountry,limit);
+                }
+            }
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -205,7 +270,7 @@ public class CityReportsOne {
     /**
      * All the cities in a district organised by largest population to smallest.
      */
-    public void CityDistrict(Connection con){
+    public void CityDistrict(Connection con,int limit){
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
@@ -226,8 +291,22 @@ public class CityReportsOne {
 
                 citydistrict.add(city);
             }
-            displayfour(citydistrict);
+            if(citydistrict==null)
+            {
+                System.out.println("Your list is empty");
 
+            }
+            else
+            {
+                if(limit==-1)
+                {
+                    displayfour(citydistrict);
+                }
+                else
+                {
+                    cp.Display(citydistrict,limit);
+                }
+            }
         } catch (Exception e) {
             System.out.println(e.getMessage());
             System.out.println("Failed to get details");
