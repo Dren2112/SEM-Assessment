@@ -1,0 +1,48 @@
+name: Feature Request
+description: File a bug report
+title: "[Feature]: "
+labels: ["feature request"]
+assignees:
+  - Dren2112
+  - d-vermeulen
+  - souravverma3738
+  - PLukop1407
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this feature request!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: more-info
+    attributes:
+      label: Feature information
+      description: Please include a detailed description of the proposed feature
+      placeholder: Tell us about the feature!
+      value: "please tell us about the proposed feature"
+    validations:
+      required: true
+  - type: textarea
+    id: user-story
+    attributes:
+      label: Feature described as user story
+      description: Please describe the proposed feature as a user story
+      placeholder: Tell us about the feature!
+      value: "As a [insert role], i want [insert feature] so that i can [explain value]"
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/Dren2112/SEM-Assessment/blob/master/Code_of_Conduct.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
