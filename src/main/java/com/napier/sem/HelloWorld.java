@@ -194,6 +194,7 @@ public class HelloWorld
         Thread.sleep(1000);
         app.cityOne.CityDistrict(app.con,4);
 
+        app.popRep.PopContinent(app.con,-1);
         // Disconnect from database
         app.disconnect();
     }
