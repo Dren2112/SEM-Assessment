@@ -158,6 +158,17 @@ public class HelloWorld
         System.out.println(" ");
         System.out.println(" ");
 
+        // White Space
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println(" ");
+
+        System.out.println("------------------------------------------------------------------------------------------------------");
+        System.out.println("Language Reports");
+        app.LangRep.LanguageReport(app.con,-1);
+        System.out.println(" ");
+        System.out.println(" ");
+
         /**
          *      Code Commented Out To Fix Bug - Can Be Discussed At Next Meeting
          *
