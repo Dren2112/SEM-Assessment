@@ -93,7 +93,7 @@ public class HelloWorld
 
         // Connect to database
         app.connect();
-/*
+
         // execute queries
         app.countryOne.World(app.con, -1);
         app.countryOne.Continent(app.con, -1);
@@ -132,7 +132,7 @@ public class HelloWorld
         System.out.println(" ");
         System.out.println(" ");
               System.out.println("\n\n");
-  */
+
             System.out.println("\t\t\t\t***********WELCOME IN THE PROGRAM***********");
             System.out.println("LOADING..........");
             Thread.sleep(1000);
