@@ -21,7 +21,7 @@ public class CityReportsOne {
             Statement stmt = con.createStatement();
             // Create string for SQL statement
             String strSelect =
-                    "Select ID, Name, District, population from city ORDER BY population DESC";
+                    "Select city.ID, city.Name,country.name,city.District, city.population from city join country on city.countrycode= country.code ORDER BY population DESC";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
 
@@ -30,10 +30,11 @@ public class CityReportsOne {
             //populate arraylist
             while (rset.next()) {
                 City city = new City();
-                city.ID = rset.getInt("ID");
-                city.Name = rset.getString("Name");
-
-                city.Popluation = rset.getInt("population");
+                city.ID = rset.getInt("city.ID");
+                city.Name = rset.getString("city.Name");
+                city.countryname= rset.getString("country.name");
+                city.District=rset.getString("city.District");
+                city.Popluation = rset.getInt("city.population");
 
                 cityworld.add(city);
             }
@@ -82,7 +83,7 @@ public class CityReportsOne {
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
-            String strSelect ="Select city.ID, city.Name,country.name,city.Population,country.continent from city join country on city.Countrycode=country.code where city.Countrycode=country.code AND country.continent= 'Asia' ORDER BY city.population DESC";
+            String strSelect ="Select city.ID, city.Name,country.name,city.Population,country.continent,city.district from city join country on city.Countrycode=country.code where city.Countrycode=country.code AND country.continent= 'Asia' ORDER BY city.population DESC";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
 
@@ -96,6 +97,7 @@ public class CityReportsOne {
                 city.continent=rset.getString("country.continent");
                 city.Popluation = rset.getInt("population");
                 city.countryname=rset.getString("country.name");
+                city.District=rset.getString("city.district");
 
                 citycontinent.add(city);
             }
@@ -146,7 +148,7 @@ public class CityReportsOne {
               // Create an SQL statement
               Statement stmt = con.createStatement();
               // Create string for SQL statement
-              String strSelect ="Select city.ID, city.Name,country.name,city.Population,country.region from city join country on city.Countrycode=country.code where city.Countrycode=country.code AND country.region= 'Southern and Central Asia' ORDER BY city.population DESC";
+              String strSelect ="Select city.ID, city.Name,country.name,city.Population,country.region,city.district from city join country on city.Countrycode=country.code where city.Countrycode=country.code AND country.region= 'Southern and Central Asia' ORDER BY city.population DESC";
               // Execute SQL statement
               ResultSet rset = stmt.executeQuery(strSelect);
 
@@ -160,7 +162,7 @@ public class CityReportsOne {
                   city.region=rset.getString("country.region");
                   city.Popluation = rset.getInt("population");
                   city.countryname=rset.getString("country.name");
-
+                  city.District=rset.getString("city.district");
                   cityregion.add(city);
               }
 
@@ -213,7 +215,7 @@ public class CityReportsOne {
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
-            String strSelect ="Select city.ID, city.Name,country.name,city.Population from city join country on city.Countrycode=country.code where city.Countrycode=country.code AND country.name= 'India' ORDER BY city.population DESC";
+            String strSelect ="Select city.ID, city.Name,country.name,city.Population ,city.district from city join country on city.Countrycode=country.code where city.Countrycode=country.code AND country.name= 'India' ORDER BY city.population DESC";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
 
@@ -226,6 +228,7 @@ public class CityReportsOne {
                 city.Name = rset.getString("Name");
                 city.Popluation = rset.getInt("population");
                 city.countryname=rset.getString("country.name");
+                city.District=rset.getString("city.district");
 
                 citycountry.add(city);
             }
@@ -275,7 +278,7 @@ public class CityReportsOne {
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
-            String strSelect ="Select ID, Name, District, Population from city where district='New South Wales' ORDER BY population DESC";
+            String strSelect ="Select city.ID, city.Name, city.District, city.Population,country.name from city join country on city.countrycode= country.code where district='New South Wales' ORDER BY population DESC";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
 
@@ -284,10 +287,11 @@ public class CityReportsOne {
             //populate arraylist
             while (rset.next()) {
                 City city = new City();
-                city.ID = rset.getInt("ID");
-                city.Name = rset.getString("Name");
-                city.Popluation = rset.getInt("population");
-                city.District=rset.getString("District");
+                city.ID = rset.getInt("city.ID");
+                city.Name = rset.getString("city.Name");
+                city.Popluation = rset.getInt("city.Population");
+                city.District=rset.getString("city.District");
+                city.countryname=rset.getString("country.name");
 
                 citydistrict.add(city);
             }
