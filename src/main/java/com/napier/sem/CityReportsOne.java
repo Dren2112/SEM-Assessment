@@ -64,11 +64,9 @@ public class CityReportsOne {
 
     }
     public void display(ArrayList<City> ct) throws InterruptedException {
-        System.out.println("All the cities in the world organsied by largest population to smallest");
-        System.out.println("Processing.....");
          Thread.sleep(200);
          System.out.println("\n");
-        System.out.println("\tID\t\t\t\tName\t\t\tpopulation");
+        System.out.println("\tID\t\t\t\t\t\t\t\t\tName\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tpopulation");
         for(int i=0; i<ct.size();i++)
         {
             System.out.println("\t"+ct.get(i).ID+"\t\t\t\t\t\t\t"+ct.get(i).Name+"\t\t\t\t\t\t\t\t\t\t\t\t\t"+ct.get(i).Popluation);
@@ -128,11 +126,9 @@ public class CityReportsOne {
 
     }
     public void displayone(ArrayList<City> ct1) throws InterruptedException {
-        System.out.println("All the cities in a continent organsied by largest population to smallest");
-        System.out.println("Processing.....");
         Thread.sleep(900);
         System.out.println("\n");
-        System.out.println("\tID\t\t\t\t\t\t\tName\t\t\t\t\t\t\t\t\t\t\t\t\tCountryName\t\t\t\t\t\t\t\t\t\t\t\t\tContinent\t\t\t\t\t\t\t\t\t\t\t\t\tpopulation\t\t");
+        System.out.println("\tID\t\t\t\t\t\t\t\tName\t\t\t\t\t\t\t\t\t\t\t\t\t\tCountryName\t\t\t\t\t\t\t\t\t\t\t\t\t\tContinent\t\t\t\t\t\t\t\t\t\t\t\t\tpopulation\t\t");
         for(int i=0; i<ct1.size();i++)
         {
             System.out.println("\t"+ct1.get(i).ID+"\t\t\t\t\t\t\t"+ct1.get(i).Name+"\t\t\t\t\t\t\t\t\t\t\t\t\t"+ct1.get(i).continent+"\t\t\t\t\t\t\t\t\t\t\t\t\t"+ct1.get(i).Popluation);
@@ -193,11 +189,9 @@ public class CityReportsOne {
 
       }
     public void displaytwo(ArrayList<City> ct2) throws InterruptedException {
-        System.out.println("All the cities in specified region organsied by largest population to smallest");
-        System.out.println("Processing.....");
         Thread.sleep(900);
         System.out.println("\n");
-        System.out.println("\tID\t\t\t\t\t\t\tName\t\t\t\t\t\t\t\t\t\t\t\t\tCountryName\t\t\t\t\t\t\t\t\t\t\t\t\tRegion\t\t\t\t\t\t\t\t\t\t\t\t\tpopulation\t\t");
+        System.out.println("\tID\t\t\t\t\t\t\t\tName\t\t\t\t\t\t\t\t\t\t\t\t\t\tCountryName\t\t\t\t\t\t\t\t\t\t\t\t\t\tRegion\t\t\t\t\t\t\t\t\t\t\t\t\tpopulation\t\t");
         for(int i=0; i<ct2.size();i++)
         {
             System.out.println("\t"+ct2.get(i).ID+"\t\t\t\t\t\t\t"+ct2.get(i).Name+"\t\t\t\t\t\t\t\t\t\t\t\t\t"+ct2.get(i).region+"\t\t\t\t\t\t\t\t\t\t\t\t\t"+ct2.get(i).Popluation);
@@ -259,11 +253,9 @@ public class CityReportsOne {
 
     }
     public void displaythree(ArrayList<City> ct3) throws InterruptedException {
-        System.out.println("All the cities in specified region organsied by largest population to smallest");
-        System.out.println("Processing.....");
         Thread.sleep(900);
         System.out.println("\n");
-        System.out.println("\tID\t\t\t\t\t\t\tName\t\t\t\t\t\t\t\t\t\t\t\t\tCountryName\t\t\t\t\t\t\t\t\t\t\t\t\tpopulation\t\t");
+        System.out.println("\tID\t\t\t\t\t\t\t\tName\t\t\t\t\t\t\t\t\t\t\t\t\t\tCountryName\t\t\t\t\t\t\t\t\t\t\t\t\t\tpopulation\t\t");
         for (int i = 0; i < ct3.size(); i++) {
             System.out.println("\t" + ct3.get(i).ID + "\t\t\t\t\t\t\t" + ct3.get(i).Name + "\t\t\t\t\t\t\t\t\t\t\t\t\t" + ct3.get(i).countryname + "\t\t\t\t\t\t\t\t\t\t\t\t\t" +ct3.get(i).Popluation);
         }
@@ -320,8 +312,6 @@ public class CityReportsOne {
 
     }
     public void displayfour(ArrayList<City> ct4) throws InterruptedException {
-        System.out.println("All the cities in specified region organsied by largest population to smallest");
-        System.out.println("Processing.....");
         Thread.sleep(900);
         System.out.println("\n");
         System.out.println("\tID\t\t\t\t\t\t\tName\t\t\t\t\t\t\t\t\t\t\t\t\tDistrict\t\t\t\t\t\t\t\t\t\t\t\t\tpopulation\t\t");
