@@ -7,8 +7,9 @@ public class Population {
     String countryname;
     String continentname;
     String regionname;
-    Float country_pop, continent_pop, region_pop;
-    int people_live_inside;
-    BigInteger people_live_outside;
+    long country_pop;
+    long continent_pop;
+    long region_pop;
+    float people_live_inside, people_live_outside;
 
 }
