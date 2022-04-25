@@ -41,7 +41,7 @@ public class PopulationReports {
                 System.out.println("Your list is empty");
 
             } else {
-                    displayfour(pop);
+                    displaycontinent(pop);
 
             }
         } catch (Exception e) {
@@ -49,7 +49,7 @@ public class PopulationReports {
             System.out.println("Failed to get details");
         }
     }
-        public void displayfour(ArrayList<Population> pop3) throws InterruptedException {
+        public void displaycontinent(ArrayList<Population> pop3) throws InterruptedException {
             System.out.println("The population of people, people living in cities, and people not living in cities in each continent.");
             System.out.println("Processing.....");
             Thread.sleep(900);
@@ -103,7 +103,7 @@ public class PopulationReports {
                 System.out.println("Your list is empty");
 
             } else {
-                displayfive(pop);
+                displayregion(pop);
 
             }
         } catch (Exception e) {
@@ -111,7 +111,7 @@ public class PopulationReports {
             System.out.println("Failed to get details");
         }
     }
-    public void displayfive(ArrayList<Population> pop3) throws InterruptedException {
+    public void displayregion(ArrayList<Population> pop3) throws InterruptedException {
         System.out.println("The population of people, people living in cities, and people not living in cities in each country.");
         System.out.println("Processing.....");
         Thread.sleep(900);
@@ -153,7 +153,7 @@ public class PopulationReports {
                 System.out.println("Your list is empty");
 
             } else {
-                displaysix(pop);
+                displaycountry(pop);
 
             }
         } catch (Exception e) {
@@ -161,7 +161,7 @@ public class PopulationReports {
             System.out.println("Failed to get details");
         }
     }
-    public void displaysix(ArrayList<Population> pop3) throws InterruptedException {
+    public void displaycountry(ArrayList<Population> pop3) throws InterruptedException {
         System.out.println("The population of people, people living in cities, and people not living in cities in each country.");
         System.out.println("Processing.....");
         Thread.sleep(900);
