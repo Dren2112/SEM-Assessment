@@ -63,7 +63,7 @@ public class ExtraInformation {
                 world.add(population);
             }
             //Send arraylist to output
-            sendToOutput(world,limit);
+            output(world);
 
             return world;
 
@@ -99,7 +99,7 @@ public class ExtraInformation {
                 world.add(population);
             }
             //Send arraylist to output
-            sendToOutput(world,limit);
+            output(world);
 
             return world;
 
@@ -134,7 +134,7 @@ public class ExtraInformation {
                 world.add(population);
             }
             //Send arraylist to output
-            sendToOutput(world,limit);
+            output(world);
 
             return world;
 
@@ -171,7 +171,7 @@ public class ExtraInformation {
                 world.add(population);
             }
             //Send arraylist to output
-            sendToOutput(world,limit);
+            output(world);
 
             return world;
 
@@ -207,7 +207,7 @@ public class ExtraInformation {
                 world.add(population);
             }
             //Send arraylist to output
-            sendToOutput(world,limit);
+            output(world);
 
             return world;
 
@@ -244,7 +244,7 @@ public class ExtraInformation {
                 world.add(population);
             }
             //Send arraylist to output
-            sendToOutput(world,limit);
+            output(world);
 
             return world;
 
@@ -257,20 +257,9 @@ public class ExtraInformation {
     }
 
 
-
-    public void sendToOutput(ArrayList<ExInfoPopulation> world, int limit ){
-
-        if (world == null){
-            System.out.println("No Data To Send");
-        }
-        else{
-
-            //send arraylist to output
-            if (limit == -1) {
-                output(world);
-            }
-        }
-    }
+    /*
+    Method for outputting the data from the extra information reports.
+     */
 
     public void output(ArrayList<ExInfoPopulation> contents){
 
