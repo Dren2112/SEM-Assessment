@@ -145,7 +145,7 @@ public class HelloWorld
             app.cityOne.CityWorld(app.con,-1);
             System.out.println("\n\n\n\n");
 
-            System.out.println("As an organisation, we want to find the top N populated cities in the world where N is provided by the user, so that we can make a report on the based of top N populated cities.");
+        System.out.println("As an organisation, we want to find the top N populated cities in the world where N is provided by the user, so that we can make a report on the based of top N populated cities.");
             Thread.sleep(1000);
             app.cityOne.CityWorld(app.con,6);
 
@@ -156,7 +156,7 @@ public class HelloWorld
             Thread.sleep(1000);
             app.cityOne.CityContinent(app.con,-1);
 
-            System.out.println("As an organisation, we want to find the top N populated cities in a continent where N is provided by the user, so that we can make a report on the based of top N populated cities.");
+        System.out.println("As an organisation, we want to find the top N populated cities in a continent where N is provided by the user, so that we can make a report on the based of top N populated cities.");
             Thread.sleep(1000);
             app.cityOne.CityContinent(app.con,6);
 
