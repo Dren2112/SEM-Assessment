@@ -15,7 +15,7 @@ public class PopulationReports {
     /**
      * The population of people, people living in cities, and people not living in cities in each continent.
      */
-    public void PopContinent(Connection con) {
+    public void PopContinent(Connection con,int limit) {
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
@@ -70,7 +70,7 @@ public class PopulationReports {
     /**
      * The population of people, people living in cities, and people not living in cities in each region.
      */
-    public void PopRegion(Connection con){
+    public void PopRegion(Connection con,int limit){
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
@@ -127,7 +127,7 @@ public class PopulationReports {
     /**
      * The population of people, people living in cities, and people not living in cities in each country.
      */
-    public void PopCountry(Connection con){
+    public void PopCountry(Connection con,int limit){
  try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
