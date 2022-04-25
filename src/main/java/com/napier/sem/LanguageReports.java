@@ -92,11 +92,16 @@ public class LanguageReports {
         }
         else {
             System.out.println("------------------------------------------------------------------------------------------------------");
-            System.out.println("Language || Total Speakers || Percentage of World");
+            System.out.println("Language                ||              Total Speakers              ||             Percentage of World");
+            System.out.println("------------------------------------------------------------------------------------------------------");
             for (int i = 0; i < contents.size(); i++) {
-                System.out.println(
-                        contents.get(i).language + " " + contents.get(i).Speakers + " " + contents.get(i).Percentage + "%"
-                );
+
+                        
+                        String strLang = String.format("%-43s", contents.get(i).language);
+                        String strSpeak = String.format("%-50s", contents.get(i).Speakers);
+                        String strPercent = String.format("%-18s", contents.get(i).Percentage);
+
+                        System.out.println(strLang + strSpeak + strPercent);
             }
         }
     }
