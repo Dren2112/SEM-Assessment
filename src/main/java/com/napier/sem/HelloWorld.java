@@ -158,56 +158,7 @@ public class HelloWorld
         System.out.println(" ");
         System.out.println(" ");
 
-        /**
-         *      Code Commented Out To Fix Bug - Can Be Discussed At Next Meeting
-         *
-         */
-        //while(true)
-        //{
-        //System.out.println("\t\t\t\t***********WELCOME IN THE PROGRAM***********");
-        //System.out.println("LOADING..........");
-        //Thread.sleep(1000);
-        //System.out.println("Press 1 for Organised all the cities in the WORLD By Largest to Smallest");
-        //System.out.println("Press 2 for Organised all the cities in a CONTINENT By Largest to Smallest");
-        //System.out.println("Press 3 for Organised all the cities in a REGION By Largest to Smallest");
-        //System.out.println("Press 4 for Organised all the cities in a COUNTRY By Largest to Smallest");
-        //System.out.println("Press 5 for Organised all the cities in a DISTRICT By Largest to Smallest");
-        //System.out.println("Press 6 for EXIT") ;
-        //Scanner s1= new Scanner(System.in);
-        //int a = s1.nextInt();
-        //switch(a)
-        //{
-        //    case 1:
-        //        System.out.println("As an organisation, we want to be able to list all the cities in the world in descending order, so that we can make a report on city population.");
-        //        System.out.println("Processing......");
-        //        Thread.sleep(900);
-        //        app.cityOne.CityWorld(app.con);
-        //    case 2:
-        //        System.out.println("As an organisation, we want to be able to list all the cities in a continent in descending order, so that we can make a report on city population.");
-        //        System.out.println("Processing......");
-        //        Thread.sleep(900);
-        //        app.cityOne.CityContinent(app.con);
-        //    case 3:
-        //        System.out.println("As an organisation, we want to be able to list all the cities in a specified region in descending order, so that we can make a report on city population.");
-        //        System.out.println("Processing......");
-        //        Thread.sleep(900);
-        //        app.cityOne.CityRegion(app.con);
-        //    case 4:
-        //        System.out.println("As an organisation, we want to be able to list all the cities in a country in descending order, so that we can make a report on city population.");
-        //        System.out.println("Processing......");
-        //        Thread.sleep(900);
-        //        app.cityOne.CityCountry(app.con);
-        //    case 5:
-        //        System.out.println("As an organisation, we want to be able to list all the cities in a district in descending order, so that we can make a report on city population.");
-        //        System.out.println("Processing......");
-        //        Thread.sleep(900);
-        //        app.cityOne.CityDistrict(app.con);
-        //    case 6:
-        //        exit(0);
-        //    default:
-        //        System.out.println("Sorry Wrong Input Please Try Again");
-        //}
-              System.out.println("\n\n");
+        System.out.println("\n\n");
 
             System.out.println("\t\t\t\t***********WELCOME IN THE PROGRAM***********");
             System.out.println("LOADING..........");
@@ -273,5 +224,5 @@ public class HelloWorld
         // Disconnect from database
         app.disconnect();
     }
-    }
 }
+
