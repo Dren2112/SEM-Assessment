@@ -220,9 +220,9 @@ public class HelloWorld
         System.out.println("As an organisation, we want to find the top N populated cities in a district where N is provided by the user, so that we can make a report on the based of top N populated cities.");
         Thread.sleep(1000);
         app.cityOne.CityDistrict(app.con,4);
-        app.popRep.PopContinent(app.con,-1);
-        app.popRep.PopCountry(app.con,-1);
-        app.popRep.PopRegion(app.con,-1);
+        app.popRep.PopContinent(app.con);
+        app.popRep.PopCountry(app.con);
+        app.popRep.PopRegion(app.con);
         // Disconnect from database
         app.disconnect();
     }
