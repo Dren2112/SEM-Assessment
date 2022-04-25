@@ -11,16 +11,17 @@ import java.util.ArrayList;
  */
 public class CityReportsOne {
 
+    CityReportsTwo cp= new CityReportsTwo();
     /**
      * All the cities in the world organised by largest population to smallest.
      */
-    public void CityWorld(Connection con){
+    public void CityWorld(Connection con,int limit){
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
             String strSelect =
-                    "Select ID, Name, District, population from city ORDER BY population DESC";
+                    "Select city.ID, city.Name,country.name,city.District, city.population from city join country on city.countrycode= country.code ORDER BY population DESC";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
 
@@ -29,15 +30,31 @@ public class CityReportsOne {
             //populate arraylist
             while (rset.next()) {
                 City city = new City();
-                city.ID = rset.getInt("ID");
-                city.Name = rset.getString("Name");
-
-                city.Popluation = rset.getInt("population");
+                city.ID = rset.getInt("city.ID");
+                city.Name = rset.getString("city.Name");
+                city.countryname= rset.getString("country.name");
+                city.District=rset.getString("city.District");
+                city.Popluation = rset.getInt("city.population");
 
                 cityworld.add(city);
             }
-            display(cityworld);
 
+            if(cityworld==null)
+            {
+                System.out.println("Your list is empty");
+
+            }
+            else
+            {
+                if(limit==-1)
+                {
+                    display(cityworld);
+                }
+                else
+                {
+                    cp.Display(cityworld,limit);
+                }
+            }
         } catch (Exception e) {
             System.out.println(e.getMessage());
             System.out.println("Failed to get details");
@@ -61,12 +78,12 @@ public class CityReportsOne {
     /**
      * All the cities in a continent organised by largest population to smallest.
      */
-    public void CityContinent(Connection con){
+    public void CityContinent(Connection con,int limit){
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
-            String strSelect ="Select city.ID, city.Name,country.name,city.Population,country.continent from city join country on city.Countrycode=country.code where city.Countrycode=country.code AND country.continent= 'Asia' ORDER BY city.population DESC";
+            String strSelect ="Select city.ID, city.Name,country.name,city.Population,country.continent,city.district from city join country on city.Countrycode=country.code where city.Countrycode=country.code AND country.continent= 'Asia' ORDER BY city.population DESC";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
 
@@ -80,10 +97,27 @@ public class CityReportsOne {
                 city.continent=rset.getString("country.continent");
                 city.Popluation = rset.getInt("population");
                 city.countryname=rset.getString("country.name");
+                city.District=rset.getString("city.district");
 
                 citycontinent.add(city);
             }
-            displayone(citycontinent);
+
+            if(citycontinent==null)
+            {
+                System.out.println("Your list is empty");
+
+            }
+            else
+            {
+                if(limit==-1)
+                {
+                    displayone(citycontinent);
+                }
+                else
+                {
+                    cp.Display(citycontinent,limit);
+                }
+            }
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -109,12 +143,12 @@ public class CityReportsOne {
     /**
      * All the cities in a region organised by largest population to smallest.
      */
-      public void CityRegion(Connection con){
+      public void CityRegion(Connection con,int limit){
           try {
               // Create an SQL statement
               Statement stmt = con.createStatement();
               // Create string for SQL statement
-              String strSelect ="Select city.ID, city.Name,country.name,city.Population,country.region from city join country on city.Countrycode=country.code where city.Countrycode=country.code AND country.region= 'Southern and Central Asia' ORDER BY city.population DESC";
+              String strSelect ="Select city.ID, city.Name,country.name,city.Population,country.region,city.district from city join country on city.Countrycode=country.code where city.Countrycode=country.code AND country.region= 'Southern and Central Asia' ORDER BY city.population DESC";
               // Execute SQL statement
               ResultSet rset = stmt.executeQuery(strSelect);
 
@@ -128,11 +162,28 @@ public class CityReportsOne {
                   city.region=rset.getString("country.region");
                   city.Popluation = rset.getInt("population");
                   city.countryname=rset.getString("country.name");
-
+                  city.District=rset.getString("city.district");
                   cityregion.add(city);
               }
-              displaytwo(cityregion);
 
+
+              if(cityregion==null)
+              {
+                  System.out.println("Your list is empty");
+
+              }
+              else
+              {
+                  if(limit==-1)
+                  {
+
+                      displaytwo(cityregion);
+                  }
+                  else
+                  {
+                      cp.Display(cityregion,limit);
+                  }
+              }
           } catch (Exception e) {
               System.out.println(e.getMessage());
               System.out.println("Failed to get details");
@@ -159,12 +210,12 @@ public class CityReportsOne {
     /**
      * All the cities in a country organised by largest population to smallest.
      */
-    public void CityCountry(Connection con){
+    public void CityCountry(Connection con,int limit){
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
-            String strSelect ="Select city.ID, city.Name,country.name,city.Population from city join country on city.Countrycode=country.code where city.Countrycode=country.code AND country.name= 'India' ORDER BY city.population DESC";
+            String strSelect ="Select city.ID, city.Name,country.name,city.Population ,city.district from city join country on city.Countrycode=country.code where city.Countrycode=country.code AND country.name= 'India' ORDER BY city.population DESC";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
 
@@ -177,10 +228,27 @@ public class CityReportsOne {
                 city.Name = rset.getString("Name");
                 city.Popluation = rset.getInt("population");
                 city.countryname=rset.getString("country.name");
+                city.District=rset.getString("city.district");
 
                 citycountry.add(city);
             }
-            displaythree(citycountry);
+
+            if(citycountry==null)
+            {
+                System.out.println("Your list is empty");
+
+            }
+            else
+            {
+                if(limit==-1)
+                {
+                    displaythree(citycountry);
+                }
+                else
+                {
+                    cp.Display(citycountry,limit);
+                }
+            }
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -205,12 +273,12 @@ public class CityReportsOne {
     /**
      * All the cities in a district organised by largest population to smallest.
      */
-    public void CityDistrict(Connection con){
+    public void CityDistrict(Connection con,int limit){
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
-            String strSelect ="Select ID, Name, District, Population from city where district='New South Wales' ORDER BY population DESC";
+            String strSelect ="Select city.ID, city.Name, city.District, city.Population,country.name from city join country on city.countrycode= country.code where district='New South Wales' ORDER BY population DESC";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
 
@@ -219,15 +287,30 @@ public class CityReportsOne {
             //populate arraylist
             while (rset.next()) {
                 City city = new City();
-                city.ID = rset.getInt("ID");
-                city.Name = rset.getString("Name");
-                city.Popluation = rset.getInt("population");
-                city.District=rset.getString("District");
+                city.ID = rset.getInt("city.ID");
+                city.Name = rset.getString("city.Name");
+                city.Popluation = rset.getInt("city.Population");
+                city.District=rset.getString("city.District");
+                city.countryname=rset.getString("country.name");
 
                 citydistrict.add(city);
             }
-            displayfour(citydistrict);
+            if(citydistrict==null)
+            {
+                System.out.println("Your list is empty");
 
+            }
+            else
+            {
+                if(limit==-1)
+                {
+                    displayfour(citydistrict);
+                }
+                else
+                {
+                    cp.Display(citydistrict,limit);
+                }
+            }
         } catch (Exception e) {
             System.out.println(e.getMessage());
             System.out.println("Failed to get details");
