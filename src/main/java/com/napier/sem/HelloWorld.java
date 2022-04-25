@@ -94,7 +94,7 @@ public class HelloWorld
         // Connect to database
         app.connect();
 
-        // execute queries
+       // execute queries
         app.countryOne.World(app.con, -1);
         app.countryOne.Continent(app.con, -1);
         app.countryOne.Region(app.con, -1);
@@ -194,6 +194,7 @@ public class HelloWorld
         Thread.sleep(1000);
         app.cityOne.CityDistrict(app.con,4);
         app.popRep.PopContinent(app.con);
+        app.popRep.PopCountry(app.con);
         // Disconnect from database
         app.disconnect();
     }
