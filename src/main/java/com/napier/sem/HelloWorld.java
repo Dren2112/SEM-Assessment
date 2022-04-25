@@ -195,6 +195,7 @@ public class HelloWorld
         app.cityOne.CityDistrict(app.con,4);
         app.popRep.PopContinent(app.con);
         app.popRep.PopCountry(app.con);
+        app.popRep.PopRegion(app.con);
         // Disconnect from database
         app.disconnect();
     }
