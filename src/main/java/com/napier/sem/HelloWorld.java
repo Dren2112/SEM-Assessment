@@ -98,7 +98,7 @@ public class HelloWorld
             app.connect(args[0], Integer.parseInt(args[1]));
         }
 
-        // execute queries
+       // execute queries
         app.countryOne.World(app.con, -1);
         app.countryOne.Continent(app.con, -1);
         app.countryOne.Region(app.con, -1);
@@ -221,6 +221,8 @@ public class HelloWorld
         Thread.sleep(1000);
         app.cityOne.CityDistrict(app.con,4);
         app.popRep.PopContinent(app.con);
+        app.popRep.PopCountry(app.con);
+        app.popRep.PopRegion(app.con);
         // Disconnect from database
         app.disconnect();
     }
