@@ -269,6 +269,18 @@ public class HelloWorld
         System.out.println(" ");
 
         System.out.println("------------------------------------------------------------------------------------------------------");
+        System.out.println("Language Report");
+        app.LangRep.LanguageReport(app.con,-1);
+        System.out.println(" ");
+        System.out.println(" ");
+
+
+        // White Space
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println(" ");
+
+        System.out.println("------------------------------------------------------------------------------------------------------");
         System.out.println("Information on the World Population");
         app.exInfo.ExWorld(app.con,-1);
         System.out.println(" ");
