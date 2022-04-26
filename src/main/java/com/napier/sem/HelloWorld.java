@@ -281,36 +281,43 @@ public class HelloWorld
         System.out.println(" ");
         System.out.println(" ");
 
+        //The code below is used to output the Extra Information reports, which asked for the population of various parts of the world.
+        //Below is the output for World Population
         System.out.println("------------------------------------------------------------------------------------------------------");
         System.out.println("Information on the World Population");
         app.exInfo.ExWorld(app.con,-1);
         System.out.println(" ");
         System.out.println(" ");
 
+        //Below is the output for Continent Population, the specified continent is Europe.
         System.out.println("------------------------------------------------------------------------------------------------------");
         System.out.println("Information on Continent Population, with the continent being Europe");
         app.exInfo.ExContinent(app.con,-1);
         System.out.println(" ");
         System.out.println(" ");
 
+        //Below is the output for Region Population, the specified region is Western Europe.
         System.out.println("------------------------------------------------------------------------------------------------------");
         System.out.println("Information on Region Population, with the region being Western Europe");
         app.exInfo.ExRegion(app.con,-1);
         System.out.println(" ");
         System.out.println(" ");
 
+        //Below is the output for Country Population, the specified country is France.
         System.out.println("------------------------------------------------------------------------------------------------------");
         System.out.println("Information on Country Population, with the country being France");
         app.exInfo.ExCountry(app.con,-1);
         System.out.println(" ");
         System.out.println(" ");
 
+        //Below is the output for District Population, the specified district is Utrecht
         System.out.println("------------------------------------------------------------------------------------------------------");
         System.out.println("Information on District Population, with the district being Utrecht in the Netherlands");
         app.exInfo.ExDistrict(app.con,-1);
         System.out.println(" ");
         System.out.println(" ");
 
+        //Below is the output for City Population, the specified city is Berlin.
         System.out.println("------------------------------------------------------------------------------------------------------");
         System.out.println("Information on City Population, with the city being Berlin ");
         app.exInfo.ExCity(app.con,-1);
