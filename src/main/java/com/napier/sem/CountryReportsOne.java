@@ -211,7 +211,7 @@ public class CountryReportsOne {
             System.out.println("No Data Found");
         }
         else{
-
+            System.out.println("------------------------------------------------------------------------------------------------------");
             System.out.println("Code Name Continent Region Population Capital");
             for (int i = 0; i < contents.size(); i++)
             {
