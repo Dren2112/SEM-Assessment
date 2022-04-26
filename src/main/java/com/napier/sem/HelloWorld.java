@@ -268,6 +268,7 @@ public class HelloWorld
         System.out.println(" ");
         System.out.println(" ");
 
+        //The code below is used to output the language report. It prints information only on the specified languages.
         System.out.println("------------------------------------------------------------------------------------------------------");
         System.out.println("Language Report");
         app.LangRep.LanguageReport(app.con,-1);
