@@ -26,7 +26,7 @@ body:
       label: What happened?
       description: Also tell us, what did you expect to happen?
       placeholder: Tell us what you see!
-      value: "A bug happened!"
+      value: "Please include as much relivant information as you can."
     validations:
       required: true
   - type: dropdown
@@ -35,7 +35,8 @@ body:
       label: Version
       description: What version of our software are you running?
       options:
-        - Code_Review_3 (Current)
+        - Latest (Current)
+        - Code_Review_3
         - Code_Review_2
         - Code_Review_1
     validations:
@@ -53,7 +54,7 @@ body:
     id: logs
     attributes:
       label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      description: Please copy and paste any relevant log output.
       render: shell
   - type: checkboxes
     id: terms
