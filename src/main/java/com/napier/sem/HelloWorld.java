@@ -263,6 +263,48 @@ public class HelloWorld
         System.out.println("");
         System.out.println("");
 
+        // White Space
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println(" ");
+
+        System.out.println("------------------------------------------------------------------------------------------------------");
+        System.out.println("Information on the World Population");
+        app.exInfo.ExWorld(app.con,-1);
+        System.out.println(" ");
+        System.out.println(" ");
+
+        System.out.println("------------------------------------------------------------------------------------------------------");
+        System.out.println("Information on Continent Population, with the continent being Europe");
+        app.exInfo.ExContinent(app.con,-1);
+        System.out.println(" ");
+        System.out.println(" ");
+
+        System.out.println("------------------------------------------------------------------------------------------------------");
+        System.out.println("Information on Region Population, with the region being Western Europe");
+        app.exInfo.ExRegion(app.con,-1);
+        System.out.println(" ");
+        System.out.println(" ");
+
+        System.out.println("------------------------------------------------------------------------------------------------------");
+        System.out.println("Information on Country Population, with the country being France");
+        app.exInfo.ExCountry(app.con,-1);
+        System.out.println(" ");
+        System.out.println(" ");
+
+        System.out.println("------------------------------------------------------------------------------------------------------");
+        System.out.println("Information on District Population, with the district being Utrecht in the Netherlands");
+        app.exInfo.ExDistrict(app.con,-1);
+        System.out.println(" ");
+        System.out.println(" ");
+
+        System.out.println("------------------------------------------------------------------------------------------------------");
+        System.out.println("Information on City Population, with the city being Berlin ");
+        app.exInfo.ExCity(app.con,-1);
+        System.out.println(" ");
+        System.out.println(" ");
+
+
         // Disconnect from database
         app.disconnect();
     }
