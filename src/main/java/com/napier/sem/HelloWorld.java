@@ -98,49 +98,22 @@ public class HelloWorld
             app.connect(args[0], Integer.parseInt(args[1]));
         }
 
-       // execute countryOne queries
-        System.out.println("------------------------------------------------------------------------------------------------------");
-        System.out.println("Countries of the world organised by largest population to smallest.");
+       // execute queries
         app.countryOne.World(app.con, -1);
-        System.out.println(" ");
-        System.out.println(" ");
-
-        System.out.println("------------------------------------------------------------------------------------------------------");
-        System.out.println("Countries of Europe organised by largest population to smallest.");
         app.countryOne.Continent(app.con, -1);
-        System.out.println(" ");
-        System.out.println(" ");
-
-        System.out.println("------------------------------------------------------------------------------------------------------");
-        System.out.println("Countries of Western Europe organised by largest population to smallest.");
         app.countryOne.Region(app.con, -1);
-        System.out.println(" ");
-        System.out.println(" ");
 
         // White Space
         System.out.println(" ");
         System.out.println(" ");
         System.out.println(" ");
 
-        // execute countryTwo queries
-        System.out.println("------------------------------------------------------------------------------------------------------");
-        System.out.println("top N Countries of the world organised by largest population to smallest.");
+        //int limit = app.CountryTwo.GetLimit(app.con);
         app.countryOne.World(app.con, 5);
-        System.out.println(" ");
-        System.out.println(" ");
-
-        System.out.println("------------------------------------------------------------------------------------------------------");
-        System.out.println("top N Countries of Europe organised by largest population to smallest.");
+        //limit = app.CountryTwo.GetLimit(app.con);
         app.countryOne.Continent(app.con, 5);
-        System.out.println(" ");
-        System.out.println(" ");
-
-        System.out.println("------------------------------------------------------------------------------------------------------");
-        System.out.println("top N Countries of Western Europe organised by largest population to smallest.");
+        //limit = app.CountryTwo.GetLimit(app.con);
         app.countryOne.Region(app.con, 5);
-        System.out.println(" ");
-        System.out.println(" ");
-
 
         // White Space
         System.out.println(" ");
@@ -185,108 +158,110 @@ public class HelloWorld
         System.out.println(" ");
         System.out.println(" ");
 
-        // White Space
-        System.out.println(" ");
-        System.out.println(" ");
-        System.out.println(" ");
+        System.out.println("\n\n");
 
-        // White Space
-        System.out.println(" ");
-        System.out.println(" ");
-        System.out.println(" ");
+            System.out.println("\t\t\t\t***********WELCOME IN THE PROGRAM OF POPULATION IN THE CITIES ***********");
+            System.out.println("LOADING..........");
+            Thread.sleep(1000);
 
-        System.out.println("------------------------------------------------------------------------------------------------------");
-        System.out.println("Cities of the world by population in descending order");
+            //CODE TO ORGANISED ALL THE POPULATION IN THE CITIES IN THE WORLD
+
+        //CODE TO ORGANISED ALL THE POPULATION IN THE CITIES IN THE WORLD
+        System.out.println("\t\t********************Program 1 *******************");
+        System.out.println("As an organisation, we want to be able to list all the cities in the world in descending order, so that we can make a report on city population.");
+        System.out.println("Processing......");
+        Thread.sleep(1000);
         app.cityOne.CityWorld(app.con,-1);
-        System.out.println(" ");
-        System.out.println(" ");
+        System.out.println("\n\n\n\n");
+        System.out.println("");
+        System.out.println("");
 
-        System.out.println("------------------------------------------------------------------------------------------------------");
-        System.out.println("Cities in Asia by population in descending order");
+
+        // THIS CODE IS USED TO SHOW TOP N POPULATED CITIES IN THE WORLD
+        System.out.println("\n\t\t*******************Program 2******************");
+        System.out.println("As an organisation, we want to find the top N populated cities in the world where N is provided by the user, so that we can make a report on the based of top N populated cities.");
+        Thread.sleep(1000);
+        app.cityOne.CityWorld(app.con,6);
+
+        //CODE TO ORGANISED ALL THE POPULATION IN THE CITIES IN A CONTINENT
+        System.out.println("\t\t********************Program 3 *******************");
+        System.out.println("As an organisation, we want to be able to list all the cities in a continent in descending order, so that we can make a report on city population.");
+        System.out.println("Processing......");
+        Thread.sleep(1000);
         app.cityOne.CityContinent(app.con,-1);
-        System.out.println(" ");
-        System.out.println(" ");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
 
-        System.out.println("------------------------------------------------------------------------------------------------------");
-        System.out.println("Cities in Southern and Central Asia by population in descending order");
+
+        // THIS CODE IS USED TO SHOW TOP N POPULATED CITIES IN THE CONTINENT
+        System.out.println("\t\t*********************Program 4********************");
+        System.out.println("As an organisation, we want to find the top N populated cities in a continent where N is provided by the user, so that we can make a report on the based of top N populated cities.");
+        Thread.sleep(1000);
+        app.cityOne.CityContinent(app.con,6);
+
+        // CODE TO ORGANISED ALL THE POPULATION OF THE CITIES IN A SPECIFIED REGION
+        System.out.println("\t\t********************Program 5 *******************");
+        System.out.println("As an organisation, we want to be able to list all the cities in a specified region in descending order, so that we can make a report on city population.");
+        System.out.println("Processing......");
+        Thread.sleep(1000);
         app.cityOne.CityRegion(app.con,-1);
-        System.out.println(" ");
-        System.out.println(" ");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
 
-        System.out.println("------------------------------------------------------------------------------------------------------");
-        System.out.println("Cities in India by population in descending order");
-        app.cityOne.CityCountry(app.con,-1);
-        System.out.println(" ");
-        System.out.println(" ");
 
-        // White Space
-        System.out.println(" ");
-        System.out.println(" ");
-        System.out.println(" ");
-
-        System.out.println("------------------------------------------------------------------------------------------------------");
-        System.out.println("Top 5 Cities of the world by population in descending order");
-        app.cityOne.CityWorld(app.con,5);
-        System.out.println(" ");
-        System.out.println(" ");
-
-        System.out.println("------------------------------------------------------------------------------------------------------");
-        System.out.println("top 5 Cities in Asia by population in descending order");
-        app.cityOne.CityContinent(app.con,5);
-        System.out.println(" ");
-        System.out.println(" ");
-
-        System.out.println("------------------------------------------------------------------------------------------------------");
-        System.out.println("top 5 Cities in Southern and Central Asia by population in descending order");
+        // THIS CODE IS USED TO SHOW TOP N POPULATED CITIES IN THE REGION
+        System.out.println("\t\t*************************Program 6***********************");
+        System.out.println("As an organisation, we want to find the top N populated cities in a specified region where N is provided by the user, so that we can make a report on the based of top N populated cities.");
+        Thread.sleep(1000);
         app.cityOne.CityRegion(app.con,6);
-        System.out.println(" ");
-        System.out.println(" ");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
 
-        System.out.println("------------------------------------------------------------------------------------------------------");
-        System.out.println("top 5 Cities in India by population in descending order");
-        app.cityOne.CityCountry(app.con,5);
-        System.out.println(" ");
-        System.out.println(" ");
+        //CODE TO ORGANISED ALL THE POPULATION OF THE CITIES IN A COUNTRY
+        System.out.println("\t\t********************Program 7 *******************");
+        System.out.println("As an organisation, we want to be able to list all the cities in a country in descending order, so that we can make a report on city population.");
+        System.out.println("Processing......");
+        Thread.sleep(1000);
+        app.cityOne.CityCountry(app.con,-1);
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
 
-        // White Space
-        System.out.println(" ");
-        System.out.println(" ");
-        System.out.println(" ");
 
-        System.out.println("------------------------------------------------------------------------------------------------------");
-        System.out.println("Cities in New South Wales by population in descending order");
+        // THIS CODE IS USED TO SHOW TOP N POPULATED CITIES IN THE COUNTRY
+        System.out.println("\t\t**********************Program 8************************");
+        System.out.println("As an organisation, we want to find the top N populated cities in a country where N is provided by the user, so that we can make a report on the based of top N populated cities.");
+        Thread.sleep(1000);
+        app.cityOne.CityCountry(app.con,6);
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+
+        //CODE TO ORGANISED ALL THE POPULATION OF THE CITIES IN A  DISTRICT
+        System.out.println("\t\t********************Program 9 *******************");
+        System.out.println("As an organisation, we want to be able to list all the cities in a district in descending order, so that we can make a report on city population.");
+        System.out.println("Processing......");
+        Thread.sleep(1000);
         app.cityOne.CityDistrict(app.con,-1);
-        System.out.println(" ");
-        System.out.println(" ");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
 
-        System.out.println("------------------------------------------------------------------------------------------------------");
-        System.out.println("top 5 Cities in New South Wales by population in descending order");
-        app.cityOne.CityDistrict(app.con,5);
-        System.out.println(" ");
-        System.out.println(" ");
 
-        // White Space
-        System.out.println(" ");
-        System.out.println(" ");
-        System.out.println(" ");
-
-        System.out.println("------------------------------------------------------------------------------------------------------");
-        System.out.println("The population of people, people living in cities, and people not living in cities in each continent.");
+        // THIS CODE IS USED TO SHOW TOP N POPULATED CITIES IN THE DISTRICT
+        System.out.println("\t\t**************************Program 10*******************");
+        System.out.println("As an organisation, we want to find the top N populated cities in a district where N is provided by the user, so that we can make a report on the based of top N populated cities.");
+        Thread.sleep(1000);
+        app.cityOne.CityDistrict(app.con,4);
         app.popRep.PopContinent(app.con);
-        System.out.println(" ");
-        System.out.println(" ");
-
-        System.out.println("------------------------------------------------------------------------------------------------------");
-        System.out.println("The population of people, people living in cities, and people not living in cities in each region.");
-        app.popRep.PopRegion(app.con);
-        System.out.println(" ");
-        System.out.println(" ");
-
-        System.out.println("------------------------------------------------------------------------------------------------------");
-        System.out.println("The population of people, people living in cities, and people not living in cities in each country.");
         app.popRep.PopCountry(app.con);
-        System.out.println(" ");
-        System.out.println(" ");
+        app.popRep.PopRegion(app.con);
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
 
         // White Space
         System.out.println(" ");
