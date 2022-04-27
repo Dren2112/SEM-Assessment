@@ -5,6 +5,9 @@
 * Build Status Release    
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/Dren2112/SEM-Assessment/A%20workflow%20for%20my%20Hello%20World%20App/develop?label=Build%20Develop)
 
+* Code Coverage   
+[![codecov](https://codecov.io/gh/d-vermeulen/SEM-Assessment/branch/master/graph/badge.svg?token=TE1NEMD4U5)](https://codecov.io/gh/d-vermeulen/SEM-Assessment)
+
 * Licence   
 ![GitHub](https://img.shields.io/github/license/Dren2112/SEM-Assessment)
 
