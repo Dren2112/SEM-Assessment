@@ -43,6 +43,7 @@ jobs:
         uses: codecov/codecov-action@v2
         with:
           # token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          token: ddd5768a-c7d0-40ed-bcf0-34a247d01238
           directory: ./target/site/jacoco
           flags: Integration Tests # optional
           verbose: true # optional (default = false)
