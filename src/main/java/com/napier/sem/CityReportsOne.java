@@ -321,4 +321,35 @@ public class CityReportsOne {
 
     }
 
+    /**
+     * method to output all arraylists
+     *
+     * @param contents - the arraylist containing the data to output
+     */
+    public void output(ArrayList<CapitalCity> contents){
+
+        if (contents == null){
+            System.out.println("No Data Found");
+        }
+        else{
+
+            System.out.println("------------------------------------------------------------------------------------------------------");
+            System.out.println("Capital-Name              ||              Country-Name              ||              Capital-Population");
+            System.out.println("------------------------------------------------------------------------------------------------------");
+
+            for (int i = 0; i < contents.size(); i++)
+            {
+                // prepare string
+                String one = String.format("%-40s", contents.get(i).capCityName);
+                String two = String.format("%-55s", contents.get(i).countryName);
+                String three = String.format("%-16s", contents.get(i).capCityPop);
+
+                // print string
+                System.out.println(one + two + three);
+            }
+
+        }
+
+    }
+
 }
