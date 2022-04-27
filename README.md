@@ -11,7 +11,7 @@
 * Release   
 [![Releases](https://img.shields.io/github/release/Dren2112/SEM-Assessment)](https://github.com/Dren2112/SEM-Assessment/releases)
 
-* Code Coverage
+* Code Coverage   
 [![codecov](https://codecov.io/gh/d-vermeulen/SEM-Assessment/branch/master/graph/badge.svg?token=TE1NEMD4U5)](https://codecov.io/gh/d-vermeulen/SEM-Assessment)
 
 
