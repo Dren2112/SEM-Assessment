@@ -212,16 +212,21 @@ public class CountryReportsOne {
         }
         else{
             System.out.println("------------------------------------------------------------------------------------------------------");
-            System.out.println("Code Name Continent Region Population Capital");
+            System.out.println("Code              ||              Country-Name              ||              Continent-Name              ||              Region-Name              ||              Population             ||                 Capital-Name");
+            System.out.println("------------------------------------------------------------------------------------------------------");
             for (int i = 0; i < contents.size(); i++)
             {
-                System.out.println(
-                        contents.get(i).Code
-                                + " " + contents.get(i).Name
-                                + " " + contents.get(i).Continent
-                                + " " + contents.get(i).Region
-                                + " " + String.valueOf(contents.get(i).Population)
-                                + " " + contents.get(i).Capital);
+
+                // prepare string
+                String one = String.format("%-40s", contents.get(i).Code);
+                String two = String.format("%-55s", contents.get(i).Name);
+                String three = String.format("%-55s", contents.get(i).Continent);
+                String four = String.format("%-55s", contents.get(i).Region);
+                String five = String.format("%-55s", contents.get(i).Population);
+                String six = String.format("%-16s", contents.get(i).Capital);
+
+                // print string
+                System.out.println(one + two + three + four + five + six);
             }
         }
     }
