@@ -2,7 +2,7 @@
 * Build Status Master   
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Dren2112/SEM-Assessment/A%20workflow%20for%20my%20Hello%20World%20App?label=Build%20Master)
 
-* Build Status Release    
+* Build Status Develop 
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/Dren2112/SEM-Assessment/A%20workflow%20for%20my%20Hello%20World%20App/develop?label=Build%20Develop)
 
 * Licence   
